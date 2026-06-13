@@ -1,0 +1,152 @@
+{
+  "site": {
+    "name": "Dr. Bipin Nepal",
+    "tagline": "Pioneer in Transfusion Medicine | Researcher | Public Health Contributor",
+    "description": "Advancing blood transfusion science and improving healthcare systems through research, clinical excellence, and community service."
+  },
+  "navbar": {
+    "brand": "Dr. Bipin Nepal",
+    "links": [
+      { "id": "hero", "label": "Home" },
+      { "id": "about", "label": "About" },
+      { "id": "achievements", "label": "Achievements" },
+      { "id": "research", "label": "Research" },
+      { "id": "expertise", "label": "Expertise" },
+      { "id": "impact", "label": "Impact" },
+      { "id": "contact", "label": "Contact" }
+    ],
+    "adminLabel": "Admin"
+  },
+  "hero": {
+    "title": "Dr. Bipin Nepal",
+    "tagline": "Pioneer in Transfusion Medicine | Researcher | Public Health Contributor",
+    "description": "Advancing blood transfusion science and improving healthcare systems through research, clinical excellence, and community service.",
+    "location": "Kathmandu, Nepal",
+    "experience": "11+ Years",
+    "field": "Researcher in Transfusion Medicine",
+    "image": "",
+    "badges": [
+      "Transfusion Medicine",
+      "Clinical Research",
+      "Public Health",
+      "Healthcare Systems"
+    ]
+  },
+  "about": {
+    "title": "About Dr. Bipin Nepal",
+    "text": "Dr. Bipin Nepal is a Kathmandu-based medical professional specializing in transfusion medicine, widely recognized for his contributions to advancing blood transfusion services and research in Nepal. He completed his Master's degree in Transfusion Medicine and Transplantation from Dow University of Health Sciences. He is an active member of the Asian Association of Transfusion Medicine and the International Society of Blood Transfusion."
+  },
+  "achievements": {
+    "title": "Achievements",
+    "items": [
+      {
+        "title": "Pioneer in Transfusion Medicine in Nepal",
+        "description": "Recognized for leading modern transfusion medicine initiatives in Nepal."
+      },
+      {
+        "title": "Multiple peer-reviewed publications",
+        "description": "Contributed to evidence-based advancements through medical publications."
+      },
+      {
+        "title": "Established 20+ blood banks",
+        "description": "Helped establish and standardize blood banks across Nepal."
+      },
+      {
+        "title": "COVID-19 convalescent plasma therapy",
+        "description": "Led the national program for plasma therapy during the pandemic."
+      },
+      {
+        "title": "Authored a 2000-page medical dictionary",
+        "description": "Created a comprehensive resource for medical professionals."
+      }
+    ]
+  },
+  "research": {
+    "title": "Research Areas",
+    "items": [
+      {
+        "title": "Transfusion-Transmissible Infections (TTIs)",
+        "description": "Ensuring the safety of blood supply and donor screening."
+      },
+      {
+        "title": "ABO Blood Group Discrepancies & Immunohematology",
+        "description": "Addressing complex compatibility and antibody challenges."
+      },
+      {
+        "title": "Hemovigilance Systems",
+        "description": "Monitoring and improving transfusion safety protocols."
+      },
+      {
+        "title": "COVID-19 Convalescent Plasma Therapy",
+        "description": "Developing clinical protocols and analyzing patient outcomes."
+      },
+      {
+        "title": "Patient Blood Management",
+        "description": "Reducing unnecessary transfusions and optimizing outcomes."
+      },
+      {
+        "title": "Blood Component Utilization",
+        "description": "Advancing component therapy across Nepal."
+      }
+    ]
+  },
+  "expertise": {
+    "title": "Expertise",
+    "tags": [
+      "Transfusion Medicine",
+      "Blood Banking",
+      "Immunohematology",
+      "Tissue Typing",
+      "Component Therapy",
+      "ABO Incompatibility Management",
+      "Rare Blood Group Handling",
+      "Organ Transplant Support",
+      "Bone Marrow Transplant Support",
+      "Antibody Identification",
+      "Peer-Reviewed Publications",
+      "Hemovigilance",
+      "Clinical Research",
+      "Medical Writing",
+      "Medical Dictionary Author",
+      "Blood Donation Advocacy",
+      "COVID-19 Plasma Therapy",
+      "National Policy Advisory",
+      "Media Engagement",
+      "Public Awareness Campaigns"
+    ]
+  },
+  "impact": {
+    "title": "Impact",
+    "items": [
+      {
+        "title": "Transforming Clinical Practice",
+        "description": "Shifted Nepal from whole-blood to evidence-based component therapy."
+      },
+      {
+        "title": "Building National Infrastructure",
+        "description": "Helped establish ~20 blood banks, standardizing collection, screening, storage."
+      },
+      {
+        "title": "COVID-19 Leadership",
+        "description": "Led plasma therapy nationally, covered by national and international media."
+      },
+      {
+        "title": "Policy and Advisory",
+        "description": "Contributed to blood safety policies, hemovigilance, and transplantation guidelines."
+      },
+      {
+        "title": "Academic Legacy",
+        "description": "30+ publications and a 2000-page medical dictionary advancing medical education."
+      },
+      {
+        "title": "Global Collaboration",
+        "description": "Active in ISBT, AATM, EHA, ISTH for international knowledge exchange."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "email": "drbipinnepal@gmail.com",
+    "location": "Kathmandu, Nepal"
+  }
+}
