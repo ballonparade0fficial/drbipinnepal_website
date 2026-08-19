@@ -13,9 +13,8 @@ function About({ data, site }) {
 
   return (
     <section id="about" className="section about-section" ref={ref}>
-      <div className="section-glow" aria-hidden="true" />
-      <div className="about-pattern" aria-hidden="true" />
       <div className="container">
+        <span className="eyebrow section-eyebrow">Physician · Researcher</span>
         <div className="about-layout">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
