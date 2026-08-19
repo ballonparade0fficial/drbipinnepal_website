@@ -5,22 +5,18 @@ import { useInView } from "react-intersection-observer";
 const groups = [
   {
     title: "Core Specialization",
-    accent: { hex: "#38bdf8", rgb: "56,189,248" },
     range: [0, 5],
   },
   {
     title: "Clinical Skills",
-    accent: { hex: "#a78bfa", rgb: "167,139,250" },
     range: [5, 10],
   },
   {
     title: "Research & Academic",
-    accent: { hex: "#34d399", rgb: "52,211,153" },
     range: [10, 15],
   },
   {
     title: "Public Health",
-    accent: { hex: "#fbbf24", rgb: "251,191,36" },
     range: [15, 99],
   },
 ];
@@ -30,9 +26,9 @@ function Expertise({ data }) {
   const tags = data.tags || [];
 
   return (
-    <section id="expertise" className="section expertise-section" ref={ref}>
-      <div className="section-glow" aria-hidden="true" />
+    <section id="expertise" className="section" ref={ref}>
       <div className="container">
+        <span className="eyebrow section-eyebrow">Skill Set</span>
         <motion.h2
           className="section-title"
           initial={{ opacity: 0, y: 20 }}
@@ -54,10 +50,6 @@ function Expertise({ data }) {
               <motion.div
                 key={group.title}
                 className="expertise-card"
-                style={{
-                  "--accent": group.accent.hex,
-                  "--accent-rgb": group.accent.rgb,
-                }}
                 initial={{ opacity: 0, y: 24 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.45, delay: 0.1 * groupIndex }}

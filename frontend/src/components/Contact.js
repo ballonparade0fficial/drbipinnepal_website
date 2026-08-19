@@ -6,16 +6,19 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 function Contact({ data }) {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    data.location
+  )}`;
 
   return (
-    <section id="contact" className="section contact-section" ref={ref}>
-      <div className="section-glow" aria-hidden="true" />
+    <section id="contact" className="section" ref={ref}>
       <div className="container">
+        <span className="eyebrow section-eyebrow">Get in Touch</span>
         <motion.h2
           className="section-title"
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.55 }}
         >
           {data.title}
         </motion.h2>
@@ -24,7 +27,7 @@ function Contact({ data }) {
             className="contact-card"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
           >
             <div className="contact-icon">
               <FiMail />
@@ -38,13 +41,18 @@ function Contact({ data }) {
             className="contact-card"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            transition={{ duration: 0.5, delay: 0.08 }}
           >
             <div className="contact-icon">
               <FaLinkedinIn />
             </div>
             <div className="contact-title">LinkedIn</div>
-            <a className="contact-value" href="https://www.linkedin.com/in/dr-bipin-nepal-145996101/" target="_blank" rel="noopener noreferrer">
+            <a
+              className="contact-value"
+              href="https://www.linkedin.com/in/dr-bipin-nepal-145996101/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Connect on LinkedIn
             </a>
           </motion.div>
@@ -52,17 +60,19 @@ function Contact({ data }) {
             className="contact-card"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.16 }}
           >
             <div className="contact-icon">
               <FiMapPin />
             </div>
             <div className="contact-title">Location</div>
-            <div className="contact-value">{data.location}</div>
+            <a className="contact-value" href={mapsHref} target="_blank" rel="noopener noreferrer">
+              {data.location}
+            </a>
           </motion.div>
         </div>
         <p className="contact-note">
-          Available for Research Collaborations & Academic Partnerships
+          Available for Research Collaborations &amp; Academic Partnerships
         </p>
       </div>
     </section>

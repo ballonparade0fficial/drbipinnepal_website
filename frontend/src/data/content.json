@@ -30,6 +30,12 @@
       "Clinical Research",
       "Public Health",
       "Healthcare Systems"
+    ],
+    "stats": [
+      { "label": "Publications", "value": 30, "suffix": "+" },
+      { "label": "Blood Banks", "value": 20, "suffix": "+" },
+      { "label": "Years", "value": 11, "suffix": "+" },
+      { "label": "Affiliations", "value": 4, "suffix": "+" }
     ]
   },
   "about": {
