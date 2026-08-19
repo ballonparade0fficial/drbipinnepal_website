@@ -5,19 +5,19 @@ import { useInView } from "react-intersection-observer";
 const groups = [
   {
     title: "Core Specialization",
-    range: [0, 5],
+    range: [0, 3],
   },
   {
     title: "Clinical Skills",
-    range: [5, 10],
+    range: [3, 6],
   },
   {
     title: "Research & Academic",
-    range: [10, 15],
+    range: [6, 8],
   },
   {
     title: "Public Health",
-    range: [15, 99],
+    range: [8, 99],
   },
 ];
 

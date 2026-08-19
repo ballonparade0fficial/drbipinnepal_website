@@ -9,8 +9,8 @@
   --bg-alt:           #E3E0D6;
   --surface:          #F7F5F0;
   --ink:              #23282B;
-  --muted:            #6E7679;
-  --muted-soft:       #8A9093;
+  --muted:            #5C6467;
+  --muted-soft:       #767D80;
   --border:           #DAD6CC;
   --border-strong:    #C9C4B6;
 
@@ -247,9 +247,10 @@ textarea:focus-visible,
   gap: 4px;
   background: rgba(236, 234, 228, 0.98);
   border-bottom: 1px solid var(--border);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
-
+  
 .nav-mobile-panel.open { display: flex; }
 
 .nav-mobile-link {
