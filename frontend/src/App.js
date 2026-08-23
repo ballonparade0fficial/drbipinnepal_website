@@ -12,6 +12,9 @@ import Expertise from "./components/Expertise";
 import Impact from "./components/Impact";
 import Contact from "./components/Contact";
 import Admin from "./components/Admin";
+import NotFound from "./components/NotFound";
+
+const KNOWN_PATHS = ["/", "/admin"];
 
 function App() {
   const [content, setContent] = useState(contentData);
@@ -62,7 +65,9 @@ function App() {
     };
   }, []);
 
-  const isAdminRoute = window.location.pathname === "/admin";
+  const pathname = window.location.pathname;
+  const isAdminRoute = pathname === "/admin";
+  const isKnownRoute = KNOWN_PATHS.includes(pathname);
 
   const quickLinks = content.navbar.links.filter((link) =>
     ["hero", "about", "research", "contact"].includes(link.id)
@@ -84,8 +89,19 @@ function App() {
     return <Admin data={content} setContent={setContent} />;
   }
 
+  if (!isKnownRoute) {
+    return (
+      <div className="app-shell">
+        <NotFound />
+      </div>
+    );
+  }
+
   return (
     <div className="app-shell">
+      <a href="#main-content" className="skip-link">
+        Skip to content
+      </a>
       <motion.nav
         className={`navbar ${scrolled || menuOpen ? "scrolled" : ""}`}
         initial={{ opacity: 0, y: -20 }}
@@ -134,13 +150,15 @@ function App() {
           ))}
         </div>
       </motion.nav>
-      <Hero data={content.hero} navLinks={content.navbar.links} stats={content.hero.stats} />
-      <About data={content.about} site={content.site} />
-      <Achievements data={content.achievements} />
-      <Research data={content.research} />
-      <Expertise data={content.expertise} />
-      <Impact data={content.impact} />
-      <Contact data={content.contact} />
+      <main id="main-content">
+        <Hero data={content.hero} navLinks={content.navbar.links} stats={content.hero.stats} />
+        <About data={content.about} site={content.site} />
+        <Achievements data={content.achievements} />
+        <Research data={content.research} />
+        <Expertise data={content.expertise} />
+        <Impact data={content.impact} />
+        <Contact data={content.contact} />
+      </main>
       <footer className="footer">
         <div className="container footer-columns">
           <div>
