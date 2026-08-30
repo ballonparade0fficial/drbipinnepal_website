@@ -6,9 +6,32 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 function Contact({ data }) {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
-  const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-    data.location
-  )}`;
+
+  const cards = [
+    {
+      icon: FiMail,
+      title: "Email",
+      value: data.email,
+      href: `mailto:${data.email}`,
+      external: false,
+    },
+    {
+      icon: FaLinkedinIn,
+      title: "LinkedIn",
+      value: "Connect on LinkedIn",
+      href: "https://www.linkedin.com/in/dr-bipin-nepal-145996101/",
+      external: true,
+    },
+    {
+      icon: FiMapPin,
+      title: "Location",
+      value: data.location,
+      href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+        data.location
+      )}`,
+      external: true,
+    },
+  ];
 
   return (
     <section id="contact" className="section" ref={ref}>
@@ -23,53 +46,28 @@ function Contact({ data }) {
           {data.title}
         </motion.h2>
         <div className="contact-grid">
-          <motion.div
-            className="contact-card"
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5 }}
-          >
-            <div className="contact-icon">
-              <FiMail />
-            </div>
-            <div className="contact-title">Email</div>
-            <a className="contact-value" href={`mailto:${data.email}`}>
-              {data.email}
-            </a>
-          </motion.div>
-          <motion.div
-            className="contact-card"
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.08 }}
-          >
-            <div className="contact-icon">
-              <FaLinkedinIn />
-            </div>
-            <div className="contact-title">LinkedIn</div>
-            <a
-              className="contact-value"
-              href="https://www.linkedin.com/in/dr-bipin-nepal-145996101/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Connect on LinkedIn
-            </a>
-          </motion.div>
-          <motion.div
-            className="contact-card"
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.16 }}
-          >
-            <div className="contact-icon">
-              <FiMapPin />
-            </div>
-            <div className="contact-title">Location</div>
-            <a className="contact-value" href={mapsHref} target="_blank" rel="noopener noreferrer">
-              {data.location}
-            </a>
-          </motion.div>
+          {cards.map((card, index) => {
+            const Icon = card.icon;
+            return (
+              <motion.a
+                key={card.title}
+                className="contact-card"
+                href={card.href}
+                {...(card.external
+                  ? { target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
+                initial={{ opacity: 0, y: 20 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.08 * index }}
+              >
+                <span className="contact-icon">
+                  <Icon />
+                </span>
+                <span className="contact-title">{card.title}</span>
+                <span className="contact-value">{card.value}</span>
+              </motion.a>
+            );
+          })}
         </div>
         <p className="contact-note">
           Available for Research Collaborations &amp; Academic Partnerships

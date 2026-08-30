@@ -1010,6 +1010,7 @@ textarea:focus-visible,
 }
 
 .contact-card {
+  display: block;
   padding: 30px 24px;
   border-radius: var(--radius-lg);
   background: var(--surface);
@@ -1037,6 +1038,7 @@ textarea:focus-visible,
 }
 
 .contact-title {
+  display: block;
   font-weight: 600;
   margin-bottom: 6px;
   font-size: 1rem;
@@ -1044,12 +1046,16 @@ textarea:focus-visible,
 }
 
 .contact-value {
+  display: block;
   color: var(--muted);
   font-size: 0.92rem;
   word-break: break-word;
+  transition: color 0.2s ease;
 }
 
-a.contact-value:hover { color: var(--accent2-strong); }
+.contact-card:hover .contact-value {
+  color: var(--accent2-strong);
+}
 
 .contact-note {
   margin-top: 32px;
