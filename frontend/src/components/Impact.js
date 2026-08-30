@@ -7,13 +7,6 @@ import CountUp from "react-countup";
 
 const ICONS = [FaHandsHelping, FaHeartbeat, FiTrendingUp, FaGlobeAsia];
 
-const HEADLINE_STATS = [
-  { value: 20, suffix: "+", label: "Blood banks established" },
-  { value: 30, suffix: "+", label: "Peer-reviewed publications" },
-  { value: 1, suffix: "", label: "National plasma-therapy program led" },
-  { value: 4, suffix: "", label: "International society affiliations" },
-];
-
 function Impact({ data }) {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.15 });
 
@@ -31,10 +24,14 @@ function Impact({ data }) {
         </motion.h2>
 
         <div className="impact-stats">
-          {HEADLINE_STATS.map((stat) => (
+          {(data.stats || []).map((stat) => (
             <div key={stat.label}>
               <div className="impact-stat-value">
-                {inView ? <CountUp end={stat.value} duration={1.6} /> : 0}
+                {inView ? (
+                  <CountUp end={stat.value} duration={1.6} separator="," />
+                ) : (
+                  0
+                )}
                 {stat.suffix}
               </div>
               <div className="impact-stat-label">{stat.label}</div>

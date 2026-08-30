@@ -35,12 +35,40 @@
       { "label": "Publications", "value": 30, "suffix": "+" },
       { "label": "Blood Banks", "value": 20, "suffix": "+" },
       { "label": "Years", "value": 11, "suffix": "+" },
-      { "label": "Affiliations", "value": 4, "suffix": "+" }
+      { "label": "Affiliations", "value": 4, "suffix": "" }
     ]
   },
   "about": {
     "title": "About Dr. Bipin Nepal",
-    "text": "Dr. Bipin Nepal is a Kathmandu-based medical professional specializing in transfusion medicine, widely recognized for his contributions to advancing blood transfusion services and research in Nepal. He completed his Master's degree in Transfusion Medicine and Transplantation from Dow University of Health Sciences. He is an active member of the Asian Association of Transfusion Medicine and the International Society of Blood Transfusion."
+    "text": "Dr. Bipin Nepal is a Kathmandu-based medical professional specializing in transfusion medicine, widely recognized for his contributions to advancing blood transfusion services and research in Nepal. He completed his Master's degree in Transfusion Medicine and Transplantation from Dow University of Health Sciences. He is an active member of the Asian Association of Transfusion Medicine and the International Society of Blood Transfusion.",
+    "badges": [
+      "MBBS • Dow University",
+      "MS Transfusion Medicine",
+      "11+ Years Experience"
+    ],
+    "affiliationsLabel": "Member of",
+    "affiliations": [
+      {
+        "acronym": "ISBT",
+        "name": "International Society of Blood Transfusion",
+        "url": "https://www.isbtweb.org/"
+      },
+      {
+        "acronym": "AATM",
+        "name": "Asian Association of Transfusion Medicine",
+        "url": "https://aatmweb.org/"
+      },
+      {
+        "acronym": "EHA",
+        "name": "European Hematology Association",
+        "url": "https://ehaweb.org/"
+      },
+      {
+        "acronym": "ISTH",
+        "name": "International Society on Thrombosis and Haemostasis",
+        "url": "https://www.isth.org/"
+      }
+    ]
   },
   "achievements": {
     "title": "Achievements",
@@ -98,21 +126,38 @@
   },
   "expertise": {
     "title": "Expertise",
-    "tags": [
-      "Transfusion Medicine",
-      "Blood Banking",
-      "Immunohematology",
-      "ABO Incompatibility Management",
-      "Rare Blood Group Handling",
-      "Antibody Identification",
-      "Peer-Reviewed Publications",
-      "Medical Dictionary Author",
-      "COVID-19 Plasma Therapy",
-      "National Policy Advisory"
+    "subtitle": "Specialized knowledge across transfusion medicine, clinical practice, and public health",
+    "groups": [
+      {
+        "title": "Core Specialization",
+        "tags": ["Transfusion Medicine", "Blood Banking", "Immunohematology"]
+      },
+      {
+        "title": "Clinical Skills",
+        "tags": [
+          "ABO Incompatibility Management",
+          "Rare Blood Group Handling",
+          "Antibody Identification"
+        ]
+      },
+      {
+        "title": "Research & Academic",
+        "tags": ["Peer-Reviewed Publications", "Medical Dictionary Author"]
+      },
+      {
+        "title": "Public Health",
+        "tags": ["COVID-19 Plasma Therapy", "National Policy Advisory"]
+      }
     ]
   },
   "impact": {
     "title": "Impact",
+    "stats": [
+      { "value": 20, "suffix": "+", "label": "Blood banks established" },
+      { "value": 30, "suffix": "+", "label": "Peer-reviewed publications" },
+      { "value": 2000, "suffix": "", "label": "Page medical dictionary" },
+      { "value": 4, "suffix": "", "label": "International society affiliations" }
+    ],
     "items": [
       {
         "title": "Transforming Clinical Practice",

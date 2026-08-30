@@ -2,28 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const groups = [
-  {
-    title: "Core Specialization",
-    range: [0, 3],
-  },
-  {
-    title: "Clinical Skills",
-    range: [3, 6],
-  },
-  {
-    title: "Research & Academic",
-    range: [6, 8],
-  },
-  {
-    title: "Public Health",
-    range: [8, 99],
-  },
-];
-
 function Expertise({ data }) {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.15 });
-  const tags = data.tags || [];
+  const groups = data.groups || [];
 
   return (
     <section id="expertise" className="section" ref={ref}>
@@ -37,19 +18,18 @@ function Expertise({ data }) {
         >
           {data.title}
         </motion.h2>
-        <p className="section-subtitle expertise-subtitle">
-          Specialized knowledge across transfusion medicine, clinical practice,
-          and public health
-        </p>
+        {data.subtitle && (
+          <p className="section-subtitle expertise-subtitle">{data.subtitle}</p>
+        )}
 
         <div className="expertise-grid">
           {groups.map((group, groupIndex) => {
-            const items = tags.slice(group.range[0], group.range[1]);
+            const items = group.tags || [];
             if (items.length === 0) return null;
             return (
               <motion.div
                 key={group.title}
-                className="expertise-card"
+                className="expertise-group"
                 initial={{ opacity: 0, y: 24 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.45, delay: 0.1 * groupIndex }}

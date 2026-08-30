@@ -1,15 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { FiArrowUpRight } from "react-icons/fi";
 
 function About({ data, site }) {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
-  const badges = [
-    "MBBS • Dow University",
-    "MS Transfusion Medicine",
-    "11+ Years Experience",
-  ];
-  const affiliations = ["ISBT", "AATM", "EHA", "ISTH"];
+  const badges = data.badges || [];
+  const affiliations = data.affiliations || [];
 
   return (
     <section id="about" className="section about-section" ref={ref}>
@@ -54,13 +51,31 @@ function About({ data, site }) {
             </div>
           </motion.div>
         </div>
-        <div className="about-affiliations">
-          {affiliations.map((label) => (
-            <span key={label} className="affiliation-pill">
-              {label}
+
+        {affiliations.length > 0 && (
+          <div className="affiliations">
+            <span className="eyebrow affiliations-label">
+              {data.affiliationsLabel || "Member of"}
             </span>
-          ))}
-        </div>
+            <div className="affiliations-grid">
+              {affiliations.map((item) => (
+                <a
+                  key={item.acronym}
+                  className="affiliation"
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="affiliation-acronym">
+                    {item.acronym}
+                    <FiArrowUpRight className="affiliation-arrow" aria-hidden="true" />
+                  </span>
+                  <span className="affiliation-name">{item.name}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
