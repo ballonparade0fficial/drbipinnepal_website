@@ -19,7 +19,7 @@ function Achievements({ data }) {
         </motion.h2>
         <div className="achievements-list">
           {data.items.map((item, index) => (
-            <div key={item.title} className="achievement-row">
+            <div key={item.title} className="achievement-row" style={{ "--i": index }}>
               <div className="achievement-index" aria-hidden="true">
                 {String(index + 1).padStart(2, "0")}
               </div>

@@ -412,7 +412,7 @@ textarea:focus-visible,
 /* STAT CARDS */
 .hero-stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   gap: 14px;
   margin-top: 40px;
 }
@@ -631,7 +631,7 @@ textarea:focus-visible,
 
 .affiliations-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
 
@@ -707,13 +707,10 @@ textarea:focus-visible,
 .section.scene-in .achievement-row {
   opacity: 1;
   transform: translateY(0);
+  /* --i is set inline per item so the stagger scales to any list length;
+     capped at 10 items so a long list doesn't force a multi-second wait. */
+  transition-delay: calc(min(var(--i, 0), 10) * 0.07s);
 }
-
-.section.scene-in .achievement-row:nth-child(1) { transition-delay: 0.02s; }
-.section.scene-in .achievement-row:nth-child(2) { transition-delay: 0.09s; }
-.section.scene-in .achievement-row:nth-child(3) { transition-delay: 0.16s; }
-.section.scene-in .achievement-row:nth-child(4) { transition-delay: 0.23s; }
-.section.scene-in .achievement-row:nth-child(5) { transition-delay: 0.30s; }
 
 .achievement-index {
   font-family: "Fraunces", Georgia, serif;
@@ -760,14 +757,10 @@ textarea:focus-visible,
 
 .section.scene-in .research-card {
   animation: card-rise 0.6s ease forwards;
+  /* --i is set inline per item so the stagger scales to any list length;
+     capped at 10 items so a long list doesn't force a multi-second wait. */
+  animation-delay: calc(min(var(--i, 0), 10) * 0.05s);
 }
-
-.section.scene-in .research-grid .research-card:nth-child(1) { animation-delay: 0.04s; }
-.section.scene-in .research-grid .research-card:nth-child(2) { animation-delay: 0.09s; }
-.section.scene-in .research-grid .research-card:nth-child(3) { animation-delay: 0.14s; }
-.section.scene-in .research-grid .research-card:nth-child(4) { animation-delay: 0.19s; }
-.section.scene-in .research-grid .research-card:nth-child(5) { animation-delay: 0.24s; }
-.section.scene-in .research-grid .research-card:nth-child(6) { animation-delay: 0.29s; }
 
 .research-card:hover {
   transform: translateY(-5px);
@@ -930,7 +923,7 @@ textarea:focus-visible,
 
 .impact-stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 24px;
   padding: 32px 0;
   margin: 8px 0 12px;
@@ -970,14 +963,10 @@ textarea:focus-visible,
 .section.scene-in .impact-row {
   opacity: 1;
   transform: translateY(0);
+  /* --i is set inline per item so the stagger scales to any list length;
+     capped at 10 items so a long list doesn't force a multi-second wait. */
+  transition-delay: calc(min(var(--i, 0), 10) * 0.06s);
 }
-
-.section.scene-in .impact-row:nth-child(1) { transition-delay: 0.02s; }
-.section.scene-in .impact-row:nth-child(2) { transition-delay: 0.08s; }
-.section.scene-in .impact-row:nth-child(3) { transition-delay: 0.14s; }
-.section.scene-in .impact-row:nth-child(4) { transition-delay: 0.2s; }
-.section.scene-in .impact-row:nth-child(5) { transition-delay: 0.26s; }
-.section.scene-in .impact-row:nth-child(6) { transition-delay: 0.32s; }
 
 .impact-row-title {
   font-size: 1.05rem;

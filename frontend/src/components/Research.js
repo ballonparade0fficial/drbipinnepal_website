@@ -1,11 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { FaFlask, FaVial, FaShieldVirus, FaGraduationCap } from "react-icons/fa";
-import { FiActivity } from "react-icons/fi";
+import { FaGraduationCap } from "react-icons/fa";
 import { SiResearchgate } from "react-icons/si";
+import { ICON_MAP, resolveIcon } from "../data/iconMap";
 
-const ICONS = [FaFlask, FaVial, FaShieldVirus, FiActivity];
+const FALLBACK_ICONS = [ICON_MAP.flask, ICON_MAP.vial, ICON_MAP.shield, ICON_MAP.activity];
 
 function Research({ data }) {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
@@ -24,9 +24,9 @@ function Research({ data }) {
         </motion.h2>
         <div className="research-grid">
           {data.items.map((item, index) => {
-            const Icon = ICONS[index % ICONS.length];
+            const Icon = resolveIcon(item, FALLBACK_ICONS, index);
             return (
-              <div key={item.title} className="research-card">
+              <div key={item.title} className="research-card" style={{ "--i": index }}>
                 <div className="card-icon">
                   <Icon />
                 </div>

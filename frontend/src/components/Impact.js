@@ -1,11 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { FaHandsHelping, FaHeartbeat, FaGlobeAsia } from "react-icons/fa";
-import { FiTrendingUp } from "react-icons/fi";
 import CountUp from "react-countup";
+import { ICON_MAP, resolveIcon } from "../data/iconMap";
 
-const ICONS = [FaHandsHelping, FaHeartbeat, FiTrendingUp, FaGlobeAsia];
+const FALLBACK_ICONS = [
+  ICON_MAP["hands-helping"],
+  ICON_MAP.heartbeat,
+  ICON_MAP["trending-up"],
+  ICON_MAP.globe,
+];
 
 function Impact({ data }) {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.15 });
@@ -41,9 +45,9 @@ function Impact({ data }) {
 
         <div className="impact-list">
           {data.items.map((item, index) => {
-            const Icon = ICONS[index % ICONS.length];
+            const Icon = resolveIcon(item, FALLBACK_ICONS, index);
             return (
-              <div key={item.title} className="impact-row">
+              <div key={item.title} className="impact-row" style={{ "--i": index }}>
                 <div className="impact-row-title">
                   <Icon className="impact-row-icon" aria-hidden="true" />
                   {item.title}
