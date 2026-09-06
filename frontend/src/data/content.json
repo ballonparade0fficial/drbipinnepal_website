@@ -70,7 +70,7 @@
   },
   "about": {
     "title": "About Dr. Bipin Nepal",
-    "text": "Dr. Bipin Nepal is a Kathmandu-based medical professional specializing in transfusion medicine, widely recognized for his contributions to advancing blood transfusion services and research in Nepal. He completed his Master's degree in Transfusion Medicine and Transplantation from Dow University of Health Sciences. He is an active member of the Asian Association of Transfusion Medicine and the International Society of Blood Transfusion.\n{This is just the test.}",
+    "text": "Dr. Bipin Nepal is a Kathmandu-based medical professional specializing in transfusion medicine, widely recognized for his contributions to advancing blood transfusion services and research in Nepal. He completed his Master's degree in Transfusion Medicine and Transplantation from Dow University of Health Sciences. He is an active member of the Asian Association of Transfusion Medicine and the International Society of Blood Transfusion.",
     "badges": [
       "MBBS • Dow University",
       "MS Transfusion Medicine",
@@ -130,32 +130,26 @@
     "items": [
       {
         "description": "Ensuring the safety of blood supply and donor screening.",
-        "icon": null,
         "title": "Transfusion-Transmissible Infections (TTIs)"
       },
       {
         "description": "Addressing complex compatibility and antibody challenges.",
-        "icon": null,
         "title": "ABO Blood Group Discrepancies & Immunohematology"
       },
       {
         "description": "Monitoring and improving transfusion safety protocols.",
-        "icon": null,
         "title": "Hemovigilance Systems"
       },
       {
         "description": "Developing clinical protocols and analyzing patient outcomes.",
-        "icon": null,
         "title": "COVID-19 Convalescent Plasma Therapy"
       },
       {
         "description": "Reducing unnecessary transfusions and optimizing outcomes.",
-        "icon": null,
         "title": "Patient Blood Management"
       },
       {
         "description": "Advancing component therapy across Nepal.",
-        "icon": null,
         "title": "Blood Component Utilization"
       }
     ]
@@ -223,32 +217,26 @@
     "items": [
       {
         "description": "Shifted Nepal from whole-blood to evidence-based component therapy.",
-        "icon": null,
         "title": "Transforming Clinical Practice"
       },
       {
         "description": "Helped establish ~20 blood banks, standardizing collection, screening, storage.",
-        "icon": null,
         "title": "Building National Infrastructure"
       },
       {
         "description": "Led plasma therapy nationally, covered by national and international media.",
-        "icon": null,
         "title": "COVID-19 Leadership"
       },
       {
         "description": "Contributed to blood safety policies, hemovigilance, and transplantation guidelines.",
-        "icon": null,
         "title": "Policy and Advisory"
       },
       {
         "description": "30+ publications and a 2000-page medical dictionary advancing medical education.",
-        "icon": null,
         "title": "Academic Legacy"
       },
       {
         "description": "Active in ISBT, AATM, EHA, ISTH for international knowledge exchange.",
-        "icon": null,
         "title": "Global Collaboration"
       }
     ]

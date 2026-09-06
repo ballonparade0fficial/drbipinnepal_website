@@ -96,6 +96,23 @@ async function localiseImage(imageUrl) {
   return `/images/${filename}`
 }
 
+/**
+ * Sanity returns null for fields the editor hasn't filled in (an unset icon,
+ * say). Those nulls are meaningless to the site and only add noise to a file
+ * that doubles as the human-readable backup, so drop them.
+ * Empty strings are kept — those are deliberate values, not absent ones.
+ */
+function stripNulls(value) {
+  if (Array.isArray(value)) return value.map(stripNulls)
+  if (value === null || typeof value !== 'object') return value
+
+  return Object.fromEntries(
+    Object.entries(value)
+      .filter(([, v]) => v !== null && v !== undefined)
+      .map(([k, v]) => [k, stripNulls(v)]),
+  )
+}
+
 function shape(data, imagePath) {
   return {
     site: data.site,
@@ -164,7 +181,7 @@ async function main() {
   const imagePath = await localiseImage(data.hero?.imageUrl)
   if (imagePath) console.log(`Portrait saved to ${imagePath}`)
 
-  const content = shape(data, imagePath)
+  const content = stripNulls(shape(data, imagePath))
   const json = JSON.stringify(content, null, 2) + '\n'
 
   const previous = await readFile(CONTENT_FILE, 'utf8').catch(() => null)
