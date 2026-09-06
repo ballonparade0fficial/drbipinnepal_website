@@ -12,3 +12,6 @@ build/
 .DS_Store
 
 .claude
+test.html
+# Regenerable from content.json via scripts/make-seed.mjs
+scripts/seed.ndjson

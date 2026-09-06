@@ -1,0 +1,49 @@
+name: Sync content from Sanity
+
+# Fired by a webhook from Sanity whenever the doctor presses Publish, and
+# available as a manual button in the Actions tab.
+#
+# Deliberately NOT triggered by `push` — this workflow pushes a commit itself,
+# and a push trigger would make it retrigger forever.
+on:
+  repository_dispatch:
+    types: [sanity-update]
+  workflow_dispatch:
+
+# Only ever one sync in flight; a rapid series of edits collapses into the
+# latest state rather than racing to commit.
+concurrency:
+  group: sync-content
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Fails loudly (and changes nothing) if Sanity returns incomplete content,
+      # so a bad publish can never blank the live site.
+      - name: Pull published content
+        run: node scripts/sync-content.mjs
+
+      - name: Commit if anything changed
+        run: |
+          if git diff --quiet; then
+            echo "No content changes — nothing to deploy."
+            exit 0
+          fi
+
+          git config user.name "sanity-content-sync"
+          git config user.email "actions@github.com"
+          git add frontend/src/data/content.json frontend/public/images
+          git commit -m "Update site content from Sanity"
+          git push
+          echo "Pushed updated content — Vercel will deploy it."

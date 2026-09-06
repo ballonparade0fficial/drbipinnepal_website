@@ -23,13 +23,78 @@ Live at [drbipinnepal.com](https://drbipinnepal.com), deployed on Vercel.
 
 ## Editing Content
 
-All text on the site comes from `frontend/src/data/content.json`. Edit that file directly and the
-site updates on the next build/deploy — there's no CMS or database.
+All text on the site comes from `frontend/src/data/content.json`. That file is the single source of
+truth for the site — everything else reads from it.
 
-There's also a local content-preview aid at `http://localhost:3000/admin` (development only — it's
-excluded from production builds). It lets you edit the JSON in the browser and see changes live,
-but it does **not** persist anything or write back to the repo; you still need to copy any changes
-into `content.json` yourself.
+It can be edited two ways:
+
+**1. Through Sanity Studio (how the client edits).** See "Content management" below.
+
+**2. By editing `content.json` directly.** Still works exactly as before. Note that the next Sanity
+sync will overwrite manual edits, so make lasting changes in the Studio.
+
+There's also a local preview aid at `http://localhost:3000/admin` (development only — excluded from
+production builds). It lets you edit the JSON in the browser and see changes live, but does **not**
+persist anything.
+
+## Content management (Sanity)
+
+The client edits content in Sanity Studio. Nothing on the live site talks to Sanity — content is
+pulled at publish time and committed into this repo as ordinary files.
+
+### How a change reaches the site
+
+```
+Editor presses Publish in Studio
+  → Sanity webhook fires
+  → GitHub Action (.github/workflows/sync-content.yml) runs
+  → scripts/sync-content.mjs pulls content, writes content.json (+ downloads images)
+  → Action commits and pushes to main
+  → Vercel deploys
+```
+
+Roughly 1–2 minutes end to end.
+
+### Why it's built this way
+
+- **No runtime dependency.** The deployed site contains the content; it never calls Sanity. Sanity
+  being slow, down, or gone cannot affect visitors.
+- **The repo is the system of record.** Every published version is a commit, so content has full
+  version history and can be restored with `git revert`.
+- **Images are copied in, not hotlinked.** `sync-content.mjs` downloads uploaded images into
+  `frontend/public/images/`, so the site never depends on Sanity's CDN either.
+
+### Studio
+
+- Lives in `studio/`. Run locally with `cd studio && npm run dev`.
+- Deploy with `cd studio && npx sanity deploy`.
+- Every content type is a **singleton** — one Hero, one About, etc. — pinned by fixed document id in
+  `studio/structure.js`. Duplicate/delete are disabled so a section can't be accidentally removed.
+
+### First-time setup
+
+```bash
+node scripts/make-seed.mjs                                    # content.json → seed.ndjson
+cd studio && npx sanity dataset import ../scripts/seed.ndjson production
+```
+
+Then in Sanity: add a webhook pointing at GitHub's `repository_dispatch` endpoint with event type
+`sanity-update`, authenticated with a fine-grained GitHub token (Contents: read/write on this repo).
+
+### Manual sync
+
+```bash
+node scripts/sync-content.mjs
+```
+
+Safe by design: if Sanity returns incomplete content, it exits non-zero and leaves `content.json`
+untouched rather than blanking the site.
+
+### If Sanity ever goes away
+
+Delete `.github/workflows/sync-content.yml` and the `studio/` folder. **Nothing else changes.**
+`content.json` already holds all current content in the shape the site expects, so you're back to
+editing it by hand — no rewrite, no data recovery, no downtime.
 
 ## Design
 

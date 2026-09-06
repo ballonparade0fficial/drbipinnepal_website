@@ -154,7 +154,7 @@ function App() {
         <Hero data={content.hero} navLinks={content.navbar.links} stats={content.hero.stats} />
         <About data={content.about} site={content.site} />
         <Achievements data={content.achievements} />
-        <Research data={content.research} />
+        <Research data={content.research} profiles={content.contact} />
         <Expertise data={content.expertise} />
         <Impact data={content.impact} />
         <Contact data={content.contact} />
@@ -177,33 +177,39 @@ function App() {
             <a className="footer-icon" href={`mailto:${content.contact.email}`} aria-label="Email">
               <FiMail />
             </a>
-            <a
-              className="footer-icon"
-              href="https://www.linkedin.com/in/dr-bipin-nepal-145996101/"
-              aria-label="LinkedIn"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedinIn />
-            </a>
-            <a
-              className="footer-icon"
-              href="https://scholar.google.com/citations?user=iKT_AVoAAAAJ&hl=en"
-              aria-label="Google Scholar"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGraduationCap />
-            </a>
-            <a
-              className="footer-icon"
-              href="https://www.researchgate.net/profile/Bipin-Nepal"
-              aria-label="ResearchGate"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <SiResearchgate />
-            </a>
+            {content.contact.linkedin && (
+              <a
+                className="footer-icon"
+                href={content.contact.linkedin}
+                aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedinIn />
+              </a>
+            )}
+            {content.contact.googleScholar && (
+              <a
+                className="footer-icon"
+                href={content.contact.googleScholar}
+                aria-label="Google Scholar"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGraduationCap />
+              </a>
+            )}
+            {content.contact.researchGate && (
+              <a
+                className="footer-icon"
+                href={content.contact.researchGate}
+                aria-label="ResearchGate"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <SiResearchgate />
+              </a>
+            )}
           </div>
         </div>
         <div className="footer-bottom">

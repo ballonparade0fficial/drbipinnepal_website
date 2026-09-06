@@ -12,26 +12,27 @@ function Contact({ data }) {
       icon: FiMail,
       title: "Email",
       value: data.email,
-      href: `mailto:${data.email}`,
+      href: data.email ? `mailto:${data.email}` : null,
       external: false,
     },
     {
       icon: FaLinkedinIn,
       title: "LinkedIn",
       value: "Connect on LinkedIn",
-      href: "https://www.linkedin.com/in/dr-bipin-nepal-145996101/",
+      href: data.linkedin,
       external: true,
     },
     {
       icon: FiMapPin,
       title: "Location",
       value: data.location,
-      href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-        data.location
-      )}`,
+      href: data.location
+        ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(data.location)}`
+        : null,
       external: true,
     },
-  ];
+    // A card with no link would be a dead box — drop it instead.
+  ].filter((card) => card.href);
 
   return (
     <section id="contact" className="section" ref={ref}>
@@ -69,9 +70,7 @@ function Contact({ data }) {
             );
           })}
         </div>
-        <p className="contact-note">
-          Available for Research Collaborations &amp; Academic Partnerships
-        </p>
+        {data.note && <p className="contact-note">{data.note}</p>}
       </div>
     </section>
   );
