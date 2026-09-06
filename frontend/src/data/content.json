@@ -1,19 +1,40 @@
 {
   "site": {
+    "description": "Advancing blood transfusion science and improving healthcare systems through research, clinical excellence, and community service.",
     "name": "Dr. Bipin Nepal",
-    "tagline": "Pioneer in Transfusion Medicine | Researcher | Public Health Contributor",
-    "description": "Advancing blood transfusion science and improving healthcare systems through research, clinical excellence, and community service."
+    "tagline": "Pioneer in Transfusion Medicine | Researcher | Public Health Contributor"
   },
   "navbar": {
     "brand": "Dr. Bipin Nepal",
     "links": [
-      { "id": "hero", "label": "Home" },
-      { "id": "about", "label": "About" },
-      { "id": "achievements", "label": "Achievements" },
-      { "id": "research", "label": "Research" },
-      { "id": "expertise", "label": "Expertise" },
-      { "id": "impact", "label": "Impact" },
-      { "id": "contact", "label": "Contact" }
+      {
+        "id": "hero",
+        "label": "Home"
+      },
+      {
+        "id": "about",
+        "label": "About"
+      },
+      {
+        "id": "achievements",
+        "label": "Achievements"
+      },
+      {
+        "id": "research",
+        "label": "Research"
+      },
+      {
+        "id": "expertise",
+        "label": "Expertise"
+      },
+      {
+        "id": "impact",
+        "label": "Impact"
+      },
+      {
+        "id": "contact",
+        "label": "Contact"
+      }
     ],
     "adminLabel": "Admin"
   },
@@ -22,25 +43,34 @@
     "tagline": "Pioneer in Transfusion Medicine | Researcher | Public Health Contributor",
     "description": "Advancing blood transfusion science and improving healthcare systems through research, clinical excellence, and community service.",
     "location": "Kathmandu, Nepal",
-    "experience": "11+ Years",
     "field": "Researcher in Transfusion Medicine",
     "image": "",
-    "badges": [
-      "Transfusion Medicine",
-      "Clinical Research",
-      "Public Health",
-      "Healthcare Systems"
-    ],
     "stats": [
-      { "label": "Publications", "value": 30, "suffix": "+" },
-      { "label": "Blood Banks", "value": 20, "suffix": "+" },
-      { "label": "Years", "value": 11, "suffix": "+" },
-      { "label": "Affiliations", "value": 4, "suffix": "" }
+      {
+        "label": "Publications",
+        "suffix": "+",
+        "value": 30
+      },
+      {
+        "label": "Blood Banks",
+        "suffix": "+",
+        "value": 20
+      },
+      {
+        "label": "Years",
+        "suffix": "+",
+        "value": 11
+      },
+      {
+        "label": "Affiliations",
+        "suffix": "",
+        "value": 4
+      }
     ]
   },
   "about": {
     "title": "About Dr. Bipin Nepal",
-    "text": "Dr. Bipin Nepal is a Kathmandu-based medical professional specializing in transfusion medicine, widely recognized for his contributions to advancing blood transfusion services and research in Nepal. He completed his Master's degree in Transfusion Medicine and Transplantation from Dow University of Health Sciences. He is an active member of the Asian Association of Transfusion Medicine and the International Society of Blood Transfusion.",
+    "text": "Dr. Bipin Nepal is a Kathmandu-based medical professional specializing in transfusion medicine, widely recognized for his contributions to advancing blood transfusion services and research in Nepal. He completed his Master's degree in Transfusion Medicine and Transplantation from Dow University of Health Sciences. He is an active member of the Asian Association of Transfusion Medicine and the International Society of Blood Transfusion.\n{This is just the test.}",
     "badges": [
       "MBBS • Dow University",
       "MS Transfusion Medicine",
@@ -74,24 +104,24 @@
     "title": "Achievements",
     "items": [
       {
-        "title": "Pioneer in Transfusion Medicine in Nepal",
-        "description": "Recognized for leading modern transfusion medicine initiatives in Nepal."
+        "description": "Recognized for leading modern transfusion medicine initiatives in Nepal.",
+        "title": "Pioneer in Transfusion Medicine in Nepal"
       },
       {
-        "title": "Multiple peer-reviewed publications",
-        "description": "Contributed to evidence-based advancements through medical publications."
+        "description": "Contributed to evidence-based advancements through medical publications.",
+        "title": "Multiple peer-reviewed publications"
       },
       {
-        "title": "Established 20+ blood banks",
-        "description": "Helped establish and standardize blood banks across Nepal."
+        "description": "Helped establish and standardize blood banks across Nepal.",
+        "title": "Established 20+ blood banks"
       },
       {
-        "title": "COVID-19 convalescent plasma therapy",
-        "description": "Led the national program for plasma therapy during the pandemic."
+        "description": "Led the national program for plasma therapy during the pandemic.",
+        "title": "COVID-19 convalescent plasma therapy"
       },
       {
-        "title": "Authored a 2000-page medical dictionary",
-        "description": "Created a comprehensive resource for medical professionals."
+        "description": "Created a comprehensive resource for medical professionals.",
+        "title": "Authored a 2000-page medical dictionary"
       }
     ]
   },
@@ -99,28 +129,34 @@
     "title": "Research Areas",
     "items": [
       {
-        "title": "Transfusion-Transmissible Infections (TTIs)",
-        "description": "Ensuring the safety of blood supply and donor screening."
+        "description": "Ensuring the safety of blood supply and donor screening.",
+        "icon": null,
+        "title": "Transfusion-Transmissible Infections (TTIs)"
       },
       {
-        "title": "ABO Blood Group Discrepancies & Immunohematology",
-        "description": "Addressing complex compatibility and antibody challenges."
+        "description": "Addressing complex compatibility and antibody challenges.",
+        "icon": null,
+        "title": "ABO Blood Group Discrepancies & Immunohematology"
       },
       {
-        "title": "Hemovigilance Systems",
-        "description": "Monitoring and improving transfusion safety protocols."
+        "description": "Monitoring and improving transfusion safety protocols.",
+        "icon": null,
+        "title": "Hemovigilance Systems"
       },
       {
-        "title": "COVID-19 Convalescent Plasma Therapy",
-        "description": "Developing clinical protocols and analyzing patient outcomes."
+        "description": "Developing clinical protocols and analyzing patient outcomes.",
+        "icon": null,
+        "title": "COVID-19 Convalescent Plasma Therapy"
       },
       {
-        "title": "Patient Blood Management",
-        "description": "Reducing unnecessary transfusions and optimizing outcomes."
+        "description": "Reducing unnecessary transfusions and optimizing outcomes.",
+        "icon": null,
+        "title": "Patient Blood Management"
       },
       {
-        "title": "Blood Component Utilization",
-        "description": "Advancing component therapy across Nepal."
+        "description": "Advancing component therapy across Nepal.",
+        "icon": null,
+        "title": "Blood Component Utilization"
       }
     ]
   },
@@ -129,69 +165,101 @@
     "subtitle": "Specialized knowledge across transfusion medicine, clinical practice, and public health",
     "groups": [
       {
-        "title": "Core Specialization",
-        "tags": ["Transfusion Medicine", "Blood Banking", "Immunohematology"]
+        "tags": [
+          "Transfusion Medicine",
+          "Blood Banking",
+          "Immunohematology"
+        ],
+        "title": "Core Specialization"
       },
       {
-        "title": "Clinical Skills",
         "tags": [
           "ABO Incompatibility Management",
           "Rare Blood Group Handling",
           "Antibody Identification"
-        ]
+        ],
+        "title": "Clinical Skills"
       },
       {
-        "title": "Research & Academic",
-        "tags": ["Peer-Reviewed Publications", "Medical Dictionary Author"]
+        "tags": [
+          "Peer-Reviewed Publications",
+          "Medical Dictionary Author"
+        ],
+        "title": "Research & Academic"
       },
       {
-        "title": "Public Health",
-        "tags": ["COVID-19 Plasma Therapy", "National Policy Advisory"]
+        "tags": [
+          "COVID-19 Plasma Therapy",
+          "National Policy Advisory"
+        ],
+        "title": "Public Health"
       }
     ]
   },
   "impact": {
     "title": "Impact",
     "stats": [
-      { "value": 20, "suffix": "+", "label": "Blood banks established" },
-      { "value": 30, "suffix": "+", "label": "Peer-reviewed publications" },
-      { "value": 2000, "suffix": "", "label": "Page medical dictionary" },
-      { "value": 4, "suffix": "", "label": "International society affiliations" }
+      {
+        "label": "Blood banks established",
+        "suffix": "+",
+        "value": 20
+      },
+      {
+        "label": "Peer-reviewed publications",
+        "suffix": "+",
+        "value": 30
+      },
+      {
+        "label": "Page medical dictionary",
+        "suffix": "",
+        "value": 2000
+      },
+      {
+        "label": "International society affiliations",
+        "suffix": "",
+        "value": 4
+      }
     ],
     "items": [
       {
-        "title": "Transforming Clinical Practice",
-        "description": "Shifted Nepal from whole-blood to evidence-based component therapy."
+        "description": "Shifted Nepal from whole-blood to evidence-based component therapy.",
+        "icon": null,
+        "title": "Transforming Clinical Practice"
       },
       {
-        "title": "Building National Infrastructure",
-        "description": "Helped establish ~20 blood banks, standardizing collection, screening, storage."
+        "description": "Helped establish ~20 blood banks, standardizing collection, screening, storage.",
+        "icon": null,
+        "title": "Building National Infrastructure"
       },
       {
-        "title": "COVID-19 Leadership",
-        "description": "Led plasma therapy nationally, covered by national and international media."
+        "description": "Led plasma therapy nationally, covered by national and international media.",
+        "icon": null,
+        "title": "COVID-19 Leadership"
       },
       {
-        "title": "Policy and Advisory",
-        "description": "Contributed to blood safety policies, hemovigilance, and transplantation guidelines."
+        "description": "Contributed to blood safety policies, hemovigilance, and transplantation guidelines.",
+        "icon": null,
+        "title": "Policy and Advisory"
       },
       {
-        "title": "Academic Legacy",
-        "description": "30+ publications and a 2000-page medical dictionary advancing medical education."
+        "description": "30+ publications and a 2000-page medical dictionary advancing medical education.",
+        "icon": null,
+        "title": "Academic Legacy"
       },
       {
-        "title": "Global Collaboration",
-        "description": "Active in ISBT, AATM, EHA, ISTH for international knowledge exchange."
+        "description": "Active in ISBT, AATM, EHA, ISTH for international knowledge exchange.",
+        "icon": null,
+        "title": "Global Collaboration"
       }
     ]
   },
   "contact": {
-    "title": "Contact",
     "email": "drbipinnepal@gmail.com",
+    "googleScholar": "https://scholar.google.com/citations?user=iKT_AVoAAAAJ&hl=en",
+    "linkedin": "https://www.linkedin.com/in/dr-bipin-nepal-145996101/",
     "location": "Kathmandu, Nepal",
     "note": "Available for Research Collaborations & Academic Partnerships",
-    "linkedin": "https://www.linkedin.com/in/dr-bipin-nepal-145996101/",
-    "googleScholar": "https://scholar.google.com/citations?user=iKT_AVoAAAAJ&hl=en",
-    "researchGate": "https://www.researchgate.net/profile/Bipin-Nepal"
+    "researchGate": "https://www.researchgate.net/profile/Bipin-Nepal",
+    "title": "Contact"
   }
 }
