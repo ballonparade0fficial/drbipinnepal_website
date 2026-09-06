@@ -11,13 +11,11 @@ import Research from "./components/Research";
 import Expertise from "./components/Expertise";
 import Impact from "./components/Impact";
 import Contact from "./components/Contact";
-import Admin from "./components/Admin";
 import NotFound from "./components/NotFound";
 
-const KNOWN_PATHS = ["/", "/admin"];
-
 function App() {
-  const [content, setContent] = useState(contentData);
+  // Fixed at build time — the sync script writes content.json before the build.
+  const content = contentData;
   const [scrolled, setScrolled] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -65,9 +63,9 @@ function App() {
     };
   }, []);
 
-  const pathname = window.location.pathname;
-  const isAdminRoute = pathname === "/admin";
-  const isKnownRoute = KNOWN_PATHS.includes(pathname);
+  // Content is edited in Sanity Studio and synced into content.json at build
+  // time, so the app itself is read-only — a single page at "/".
+  const isKnownRoute = window.location.pathname === "/";
 
   const quickLinks = content.navbar.links.filter((link) =>
     ["hero", "about", "research", "contact"].includes(link.id)
@@ -78,16 +76,6 @@ function App() {
   };
 
   const closeMenu = () => setMenuOpen(false);
-
-  // The admin content editor is a local editing aid, not a secured CMS —
-  // it is only built into development bundles, never shipped to production.
-  if (isAdminRoute) {
-    if (process.env.NODE_ENV === "production") {
-      window.location.replace("/");
-      return null;
-    }
-    return <Admin data={content} setContent={setContent} />;
-  }
 
   if (!isKnownRoute) {
     return (

@@ -1172,56 +1172,6 @@ textarea:focus-visible,
 }
 
 /* =============================================
-   ADMIN
-   ============================================= */
-
-.admin { padding: 120px 0 80px; }
-
-.admin-note {
-  color: var(--muted);
-  max-width: 60ch;
-  margin-bottom: 28px;
-}
-
-.admin-section { margin-bottom: 24px; }
-
-.admin-section h3 {
-  font-size: 1rem;
-  margin-bottom: 8px;
-}
-
-.admin-section textarea {
-  width: 100%;
-  min-height: 140px;
-  padding: 16px;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border-strong);
-  background: var(--surface);
-  color: var(--ink);
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.85rem;
-}
-
-.admin-section.has-error textarea {
-  border-color: #a3453a;
-}
-
-.admin-error {
-  color: #a3453a;
-  font-size: 0.85rem;
-  margin-top: 6px;
-}
-
-.admin-save-message,
-.admin-json-copy {
-  margin-top: 20px;
-  padding: 16px;
-  border-radius: var(--radius-md);
-  background: var(--accent2-soft);
-  border: 1px solid var(--border);
-}
-
-/* =============================================
    KEYFRAMES
    ============================================= */
 

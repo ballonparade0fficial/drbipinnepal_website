@@ -119,8 +119,6 @@ function shape(data, imagePath) {
     navbar: {
       brand: data.navbar?.brand,
       links: data.navbar?.links ?? [],
-      // Dev-only label for the local /admin editor; not editable in Sanity.
-      adminLabel: 'Admin',
     },
     hero: {
       title: data.hero?.title,

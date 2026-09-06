@@ -30,12 +30,8 @@ It can be edited two ways:
 
 **1. Through Sanity Studio (how the client edits).** See "Content management" below.
 
-**2. By editing `content.json` directly.** Still works exactly as before. Note that the next Sanity
-sync will overwrite manual edits, so make lasting changes in the Studio.
-
-There's also a local preview aid at `http://localhost:3000/admin` (development only — excluded from
-production builds). It lets you edit the JSON in the browser and see changes live, but does **not**
-persist anything.
+**2. By editing `content.json` directly.** Still works, and is the fallback if Sanity ever goes
+away. Note that the next Sanity sync overwrites manual edits, so make lasting changes in the Studio.
 
 ## Content management (Sanity)
 
