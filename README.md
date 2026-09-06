@@ -90,6 +90,25 @@ node scripts/sync-content.mjs
 Safe by design: if Sanity returns incomplete content, it exits non-zero and leaves `content.json`
 untouched rather than blanking the site.
 
+### Working alongside the sync bot
+
+`main` has two writers: you, and the `sanity-content-sync` bot that commits whenever content is
+published. So your local clone goes stale on its own. Pull before you start:
+
+```bash
+git pull --rebase origin main
+```
+
+If `content.json` conflicts, **don't merge it by hand** — it's generated, so regenerate it:
+
+```bash
+node scripts/sync-content.mjs
+git add frontend/src/data/content.json
+git rebase --continue
+```
+
+Sanity is the source of truth for that file, so a fresh pull is always the correct resolution.
+
 ### If Sanity ever goes away
 
 Delete `.github/workflows/sync-content.yml` and the `studio/` folder. **Nothing else changes.**
