@@ -23,27 +23,47 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
 
-      # Fails loudly (and changes nothing) if Sanity returns incomplete content,
-      # so a bad publish can never blank the live site.
-      - name: Pull published content
-        run: node scripts/sync-content.mjs
-
-      - name: Commit if anything changed
+      # Each attempt starts by resetting to the current tip of main, then
+      # regenerates content from Sanity on top of it. That makes the job immune
+      # to a stale base — whether from re-running an older run, or from a commit
+      # landing while this one sat in the queue. Sanity is the source of truth
+      # for content.json, so regenerating is always the correct resolution and
+      # no merge conflict is possible.
+      #
+      # sync-content.mjs exits non-zero if Sanity returns incomplete content,
+      # which aborts the step and leaves the site untouched.
+      - name: Sync content and push
         run: |
-          if git diff --quiet; then
-            echo "No content changes — nothing to deploy."
-            exit 0
-          fi
-
           git config user.name "sanity-content-sync"
           git config user.email "actions@github.com"
-          git add frontend/src/data/content.json frontend/public/images
-          git commit -m "Update site content from Sanity"
-          git push
-          echo "Pushed updated content — Vercel will deploy it."
+
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+
+            node scripts/sync-content.mjs
+
+            if git diff --quiet; then
+              echo "No content changes — nothing to deploy."
+              exit 0
+            fi
+
+            git add frontend/src/data/content.json frontend/public/images
+            git commit -m "Update site content from Sanity"
+
+            if git push origin HEAD:main; then
+              echo "Pushed updated content — Vercel will deploy it."
+              exit 0
+            fi
+
+            echo "main moved while this job ran — retrying (attempt $attempt of 3)…"
+          done
+
+          echo "::error::Could not push after 3 attempts."
+          exit 1
