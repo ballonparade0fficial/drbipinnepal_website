@@ -12,9 +12,14 @@ on:
 
 # Only ever one sync in flight; a rapid series of edits collapses into the
 # latest state rather than racing to commit.
+# Every run regenerates all content from scratch, so a newer run always
+# supersedes an older one. Cancelling in progress means a burst of publishes
+# (editing several sections in one sitting) collapses into a single deploy
+# instead of one per publish. Cancelling is safe: a run that doesn't reach its
+# push simply changes nothing.
 concurrency:
   group: sync-content
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   sync:
