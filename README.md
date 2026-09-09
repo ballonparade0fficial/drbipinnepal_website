@@ -6,6 +6,9 @@ JSON file.
 
 Live at [drbipinnepal.com](https://drbipinnepal.com), deployed on Vercel.
 
+> **Planning the next phase of work?** Read [`docs/roadmap.md`](docs/roadmap.md) first —
+> it is written to be self-contained for anyone picking this up cold.
+
 ## Project Structure
 
 - `frontend/` — the React app (Create React App). This is the entire project; there is no backend.
