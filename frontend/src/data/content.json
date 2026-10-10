@@ -32,6 +32,10 @@
         "label": "Impact"
       },
       {
+        "id": "media",
+        "label": "Media"
+      },
+      {
         "id": "contact",
         "label": "Contact"
       }

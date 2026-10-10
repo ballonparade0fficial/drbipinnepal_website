@@ -10,8 +10,11 @@ import Achievements from "./components/Achievements";
 import Research from "./components/Research";
 import Expertise from "./components/Expertise";
 import Impact from "./components/Impact";
+import Media from "./components/Media";
+import MediaPage from "./components/MediaPage";
 import Contact from "./components/Contact";
 import NotFound from "./components/NotFound";
+import videos from "./data/videos";
 
 function App() {
   // Fixed at build time — the sync script writes content.json before the build.
@@ -65,10 +68,11 @@ function App() {
 
   // Content is edited in Sanity Studio and synced into content.json at build
   // time, so the app itself is read-only — a single page at "/".
-  const isKnownRoute = window.location.pathname === "/";
+  const isHomeRoute = window.location.pathname === "/";
+  const isMediaRoute = window.location.pathname === "/media";
 
   const quickLinks = content.navbar.links.filter((link) =>
-    ["hero", "about", "research", "contact"].includes(link.id)
+    ["hero", "about", "research", "media", "contact"].includes(link.id)
   );
 
   const handleBackToTop = () => {
@@ -77,7 +81,11 @@ function App() {
 
   const closeMenu = () => setMenuOpen(false);
 
-  if (!isKnownRoute) {
+  if (isMediaRoute) {
+    return <MediaPage videos={videos} site={content.site} />;
+  }
+
+  if (!isHomeRoute) {
     return (
       <div className="app-shell">
         <NotFound />
@@ -145,6 +153,7 @@ function App() {
         <Research data={content.research} profiles={content.contact} />
         <Expertise data={content.expertise} />
         <Impact data={content.impact} />
+        <Media videos={videos.slice(0, 6)} />
         <Contact data={content.contact} />
       </main>
       <footer className="footer">
