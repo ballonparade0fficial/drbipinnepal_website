@@ -12,9 +12,12 @@ import Expertise from "./components/Expertise";
 import Impact from "./components/Impact";
 import Media from "./components/Media";
 import MediaPage from "./components/MediaPage";
+import Publications from "./components/Publications";
+import PublicationPage from "./components/PublicationPage";
 import Contact from "./components/Contact";
 import NotFound from "./components/NotFound";
 import videos from "./data/videos";
+import publications from "./data/publications";
 
 function App() {
   // Fixed at build time — the sync script writes content.json before the build.
@@ -70,9 +73,10 @@ function App() {
   // time, so the app itself is read-only — a single page at "/".
   const isHomeRoute = window.location.pathname === "/";
   const isMediaRoute = window.location.pathname === "/media";
+  const isPublicationRoute = window.location.pathname === "/publication";
 
   const quickLinks = content.navbar.links.filter((link) =>
-    ["hero", "about", "research", "media", "contact"].includes(link.id)
+    ["hero", "about", "research", "publications", "media", "contact"].includes(link.id)
   );
 
   const handleBackToTop = () => {
@@ -83,6 +87,10 @@ function App() {
 
   if (isMediaRoute) {
     return <MediaPage videos={videos} site={content.site} />;
+  }
+
+  if (isPublicationRoute) {
+    return <PublicationPage publications={publications} site={content.site} />;
   }
 
   if (!isHomeRoute) {
@@ -151,6 +159,7 @@ function App() {
         <About data={content.about} site={content.site} />
         <Achievements data={content.achievements} />
         <Research data={content.research} profiles={content.contact} />
+        <Publications publications={publications.slice(0, 6)} />
         <Expertise data={content.expertise} />
         <Impact data={content.impact} />
         <Media videos={videos.slice(0, 6)} />

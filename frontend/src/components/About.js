@@ -40,10 +40,10 @@ function About({ data, site }) {
           >
             <p className="about-text">{data.text}</p>
             <div className="about-stat-grid">
-              <div className="about-stat">
+              <a className="about-stat" href="/publication">
                 <div className="about-stat-title">30+ Publications</div>
                 <div className="card-text">Peer-reviewed impact</div>
-              </div>
+              </a>
               <div className="about-stat">
                 <div className="about-stat-title">~20 Blood Banks Established</div>
                 <div className="card-text">Nationwide infrastructure</div>
@@ -53,7 +53,7 @@ function About({ data, site }) {
         </div>
 
         {affiliations.length > 0 && (
-          <div className="affiliations">
+          <div id="member-of" className="affiliations">
             <span className="eyebrow affiliations-label">
               {data.affiliationsLabel || "Member of"}
             </span>

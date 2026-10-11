@@ -432,6 +432,17 @@ textarea:focus-visible,
   box-shadow: var(--shadow-soft);
 }
 
+.stat-card[href]:hover {
+  background: var(--accent);
+  color: #f7f5f0;
+}
+
+.stat-card[href]:hover .stat-icon,
+.stat-card[href]:hover .stat-value,
+.stat-card[href]:hover .stat-label {
+  color: #f7f5f0;
+}
+
 .stat-icon {
   font-size: 1.05rem;
   color: var(--accent);
@@ -623,6 +634,80 @@ textarea:focus-visible,
 }
 
 /* =============================================
+   PUBLICATIONS
+   ============================================= */
+
+.publications-section {
+  background: var(--bg);
+}
+
+.publications-intro {
+  margin-bottom: 32px;
+}
+
+.publications-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.publication-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 16px;
+  align-items: start;
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.publication-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-lift);
+}
+
+.publication-icon {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+  font-size: 0.95rem;
+}
+
+.publication-card-title {
+  color: var(--ink);
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.publication-card-link {
+  grid-column: 2;
+  margin-top: 10px;
+  color: var(--accent2);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.publication-more-link {
+  display: inline-flex;
+  margin-top: 32px;
+}
+
+.stat-card[href],
+.about-stat[href] {
+  cursor: pointer;
+}
+
+/* =============================================
    ABOUT
    ============================================= */
 
@@ -698,6 +783,16 @@ textarea:focus-visible,
   margin-bottom: 4px;
   font-size: 0.96rem;
   color: var(--ink);
+}
+
+.about-stat[href]:hover {
+  color: #f7f5f0;
+  background: var(--accent2);
+}
+
+.about-stat[href]:hover .about-stat-title,
+.about-stat[href]:hover .card-text {
+  color: #f7f5f0;
 }
 
 .affiliations {
@@ -1298,6 +1393,7 @@ textarea:focus-visible,
   .about-heading { flex-direction: column; }
   .about-accent { width: 100%; height: 3px; align-self: auto; }
   .media-grid { grid-template-columns: 1fr; }
+  .publications-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {

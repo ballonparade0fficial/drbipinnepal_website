@@ -89,8 +89,15 @@ function Hero({ data, navLinks, stats }) {
           <div className="hero-stats">
             {stats.map((stat) => {
               const Icon = iconMap[stat.label] || FaFileAlt;
+              const isLinkedStat = ["Publications", "Affiliations"].includes(stat.label);
+              const StatCard = isLinkedStat ? "a" : "div";
+              const statHref = stat.label === "Publications" ? "#publications" : "#member-of";
               return (
-                <div key={stat.label} className="stat-card">
+                <StatCard
+                  key={stat.label}
+                  className="stat-card"
+                  {...(isLinkedStat ? { href: statHref } : {})}
+                >
                   <div className="stat-icon">
                     <Icon />
                   </div>
@@ -99,7 +106,7 @@ function Hero({ data, navLinks, stats }) {
                     {stat.suffix}
                   </div>
                   <div className="stat-label">{stat.label}</div>
-                </div>
+                </StatCard>
               );
             })}
           </div>

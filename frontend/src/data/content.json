@@ -24,6 +24,10 @@
         "label": "Research"
       },
       {
+        "id": "publications",
+        "label": "Publications"
+      },
+      {
         "id": "expertise",
         "label": "Expertise"
       },
