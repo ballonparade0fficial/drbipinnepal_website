@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 import { FaGraduationCap } from "react-icons/fa";
 import { SiResearchgate } from "react-icons/si";
 import { ICON_MAP, resolveIcon } from "../data/iconMap";
+import InfoPill from "./InfoPill";
 
 const FALLBACK_ICONS = [ICON_MAP.flask, ICON_MAP.vial, ICON_MAP.shield, ICON_MAP.activity];
 
@@ -37,17 +38,32 @@ function Research({ data, profiles = {} }) {
         >
           {data.title}
         </motion.h2>
+        <span className="info-interaction-hint research-interaction-hint">
+          Click below for details
+        </span>
         <div className="research-grid">
           {data.items.map((item, index) => {
             const Icon = resolveIcon(item, FALLBACK_ICONS, index);
             return (
-              <div key={item.title} className="research-card" style={{ "--i": index }}>
+              <InfoPill
+                key={item.title}
+                className="research-card research-card-trigger"
+                pillClassName=""
+                showPreview={false}
+                info={{
+                  eyebrow: "Research area",
+                  title: item.title,
+                  description: item.description,
+                  details:
+                    "This research area connects with Dr. Bipin Nepal's work in transfusion medicine, blood-service development, patient safety, and evidence-based practice.",
+                }}
+              >
                 <div className="card-icon">
                   <Icon />
                 </div>
                 <h3 className="card-title">{item.title}</h3>
                 <p className="card-text">{item.description}</p>
-              </div>
+              </InfoPill>
             );
           })}
         </div>

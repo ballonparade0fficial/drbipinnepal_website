@@ -2,7 +2,14 @@ import React, { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { FiChevronRight, FiX } from "react-icons/fi";
 
-function InfoPill({ children, info, className = "", pillClassName = "badge-pill", hint }) {
+function InfoPill({
+  children,
+  info,
+  className = "",
+  pillClassName = "badge-pill",
+  hint,
+  showPreview = true,
+}) {
   const [isHovered, setIsHovered] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -53,7 +60,7 @@ function InfoPill({ children, info, className = "", pillClassName = "badge-pill"
       </button>
       {hint && <span className="info-pill-hint">{hint}</span>}
 
-      {isHovered && !isOpen && (
+      {showPreview && isHovered && !isOpen && (
         <span className="info-pill-preview" role="tooltip">
           <span className="info-pill-preview-label">{info.eyebrow || "Learn more"}</span>
           <span>{info.description}</span>
