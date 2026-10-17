@@ -1,8 +1,8 @@
 {
   "site": {
-    "description": "Advancing blood transfusion science and improving healthcare systems through research, clinical excellence, and community service.",
+    "description": "A Transfusion Medicine specialist contributing to safer blood services, immunohematology, research, and healthcare leadership in Nepal.",
     "name": "Dr. Bipin Nepal",
-    "tagline": "Pioneer in Transfusion Medicine | Researcher | Public Health Contributor"
+    "tagline": "Transfusion Medicine Specialist | Clinical Leader | Researcher"
   },
   "navbar": {
     "brand": "Dr. Bipin Nepal",
@@ -47,10 +47,10 @@
   },
   "hero": {
     "title": "Dr. Bipin Nepal",
-    "tagline": "Pioneer in Transfusion Medicine | Researcher | Public Health Contributor",
-    "description": "Advancing blood transfusion science and improving healthcare systems through research, clinical excellence, and community service.",
+    "tagline": "Transfusion Medicine Specialist | Clinical Leader | Researcher",
+    "description": "A Nepali physician specializing in Transfusion Medicine and Tissue Typing, with experience spanning hospital transfusion services, blood-bank management, research, education, and international professional collaboration.",
     "location": "Kathmandu, Nepal",
-    "field": "Researcher in Transfusion Medicine",
+    "field": "Transfusion Medicine & Tissue Typing Specialist",
     "image": "",
     "stats": [
       {
@@ -77,11 +77,14 @@
   },
   "about": {
     "title": "About Dr. Bipin Nepal",
-    "text": "Dr. Bipin Nepal is a Kathmandu-based medical professional specializing in transfusion medicine, widely recognized for his contributions to advancing blood transfusion services and research in Nepal. He completed his Master's degree in Transfusion Medicine and Transplantation from Dow University of Health Sciences. He is an active member of the Asian Association of Transfusion Medicine and the International Society of Blood Transfusion.",
+    "text": "Dr. Bipin Nepal is a Nepali physician specializing in Transfusion Medicine and Tissue Typing. His work connects specialist clinical practice with blood-bank management, immunohematology, transfusion safety, blood-component therapy, research, and professional education. He has held leadership roles at Grande International Hospital in Kathmandu, Birat Medical College in Biratnagar, and TU Lions Blood Transfusion and Research Centre in Kathmandu. His approach places patient safety, evidence-based practice, dependable quality systems, and practical service development at the centre of transfusion care. He serves as Joint Secretary of the Asian Association of Transfusion Medicine and participates in the Education Working Group of the AABB Global Transfusion Forum.",
     "badges": [
-      "MBBS • Dow University",
-      "MS Transfusion Medicine",
-      "11+ Years Experience"
+      "Consultant & Department Head",
+      "Joint Secretary, AATM",
+      "AABB Education Working Group",
+      "Grande International Hospital",
+      "Birat Medical College",
+      "TU Lions Blood Transfusion & Research Centre"
     ],
     "affiliationsLabel": "Member of",
     "affiliations": [
@@ -111,24 +114,28 @@
     "title": "Achievements",
     "items": [
       {
-        "description": "Recognized for leading modern transfusion medicine initiatives in Nepal.",
-        "title": "Pioneer in Transfusion Medicine in Nepal"
+        "description": "Consultant and Head of the Department of Transfusion Medicine and Blood Bank at a tertiary-care hospital in Kathmandu.",
+        "title": "Consultant and Head at Grande International Hospital"
       },
       {
-        "description": "Contributed to evidence-based advancements through medical publications.",
-        "title": "Multiple peer-reviewed publications"
+        "description": "Provides medical oversight and contributes to service development at a dedicated blood-transfusion organization in Kathmandu.",
+        "title": "Medical Director at TU Lions Blood Transfusion and Research Centre"
       },
       {
-        "description": "Helped establish and standardize blood banks across Nepal.",
-        "title": "Established 20+ blood banks"
+        "description": "Has held departmental leadership responsibilities in blood-transfusion services at a medical-college setting in Biratnagar.",
+        "title": "Departmental Leadership at Birat Medical College"
       },
       {
-        "description": "Led the national program for plasma therapy during the pandemic.",
-        "title": "COVID-19 convalescent plasma therapy"
+        "description": "Contributes to regional professional collaboration, education, and scientific exchange in transfusion medicine.",
+        "title": "Joint Secretary of the Asian Association of Transfusion Medicine"
       },
       {
-        "description": "Created a comprehensive resource for medical professionals.",
-        "title": "Authored a 2000-page medical dictionary"
+        "description": "Participates in an international forum focused on education, competency, and learning in transfusion services.",
+        "title": "AABB Global Transfusion Forum Education Working Group"
+      },
+      {
+        "description": "Research and professional work address transfusion safety, immunohematology, blood-component utilization, haemovigilance, and Patient Blood Management.",
+        "title": "Research and Clinical Leadership in Transfusion Medicine"
       }
     ]
   },
