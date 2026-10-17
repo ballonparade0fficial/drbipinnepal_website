@@ -1,5 +1,5 @@
 import React from "react";
-import { FiMail } from "react-icons/fi";
+import { FiArrowRight, FiMail } from "react-icons/fi";
 import { FaGraduationCap, FaLinkedinIn } from "react-icons/fa";
 import { SiResearchgate } from "react-icons/si";
 
@@ -35,21 +35,33 @@ function FooterIconOrbit({ label, className = "", children }) {
 
 function Footer({ content, quickLinks = [], isSubpage = false }) {
   const homePrefix = isSubpage ? "/" : "";
+  const linkDescriptions = {
+    hero: "Navigate to home page",
+    about: "Learn about Dr. Bipin Nepal",
+    achievements: "View professional milestones",
+    research: "Explore research areas",
+    publications: "Read published work",
+    expertise: "View clinical expertise",
+    impact: "See professional impact",
+    media: "Watch featured videos",
+    contact: "Get in touch",
+  };
 
   return (
     <footer className="footer">
       <div className="container footer-columns">
         <div>
-          <h3>{content.site.name}</h3>
+          <h3 className="footer-brand">
+            <img
+              className="brand-logo footer-brand-logo"
+              src={`${process.env.PUBLIC_URL}/favicon.svg`}
+              alt=""
+              aria-hidden="true"
+            />
+            <span>{content.site.name}</span>
+          </h3>
           <p className="footer-tagline">{content.site.tagline}</p>
           <p className="footer-location">Kathmandu, Nepal</p>
-        </div>
-        <div className="footer-links">
-          {quickLinks.map((link) => (
-            <a key={link.id} href={`${homePrefix}#${link.id}`} className="footer-link">
-              {link.label}
-            </a>
-          ))}
         </div>
         <div className="footer-social-column">
           <div className="footer-icons">
@@ -105,6 +117,20 @@ function Footer({ content, quickLinks = [], isSubpage = false }) {
           )}
         </div>
       </div>
+      <nav className="container footer-links footer-navigation" aria-label="Footer navigation">
+        {quickLinks.map((link) => (
+          <a key={link.id} href={`${homePrefix}#${link.id}`} className="footer-link">
+            <span className="footer-link-bar" aria-hidden="true" />
+            <span className="footer-link-copy">
+              <span className="footer-link-label">{link.label}</span>
+              <span className="footer-link-description">
+                {linkDescriptions[link.id] || `Explore ${link.label.toLowerCase()}`}
+              </span>
+            </span>
+            <FiArrowRight className="footer-link-arrow" aria-hidden="true" />
+          </a>
+        ))}
+      </nav>
       <div className="footer-bottom">
         <span>© {new Date().getFullYear()} {content.site.name} · All Rights Reserved</span>
       </div>

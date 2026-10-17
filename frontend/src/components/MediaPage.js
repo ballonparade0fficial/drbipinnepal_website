@@ -8,7 +8,12 @@ function MediaPage({ videos, site, contact, quickLinks }) {
       <header className="media-page-header">
         <div className="container media-page-header-inner">
           <a href="/" className="nav-brand">
-            <span className="nav-brand-dot" />
+            <img
+              className="brand-logo"
+              src={`${process.env.PUBLIC_URL}/favicon.svg`}
+              alt=""
+              aria-hidden="true"
+            />
             {site.name}
           </a>
           <a href="/" className="media-back-link">

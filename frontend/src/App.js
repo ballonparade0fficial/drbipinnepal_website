@@ -127,7 +127,12 @@ function App() {
       >
         <div className="container navbar-inner">
           <div className="nav-brand">
-            <span className="nav-brand-dot" />
+            <img
+              className="brand-logo"
+              src={`${process.env.PUBLIC_URL}/favicon.svg`}
+              alt=""
+              aria-hidden="true"
+            />
             {content.navbar.brand}
           </div>
           <div className="nav-links">
