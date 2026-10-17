@@ -595,7 +595,9 @@ textarea:focus-visible,
 }
 
 .media-more-link {
-  display: inline-flex;
+  display: flex;
+  width: fit-content;
+  margin-left: auto;
   margin-top: 32px;
 }
 
@@ -698,7 +700,9 @@ textarea:focus-visible,
 }
 
 .publication-more-link {
-  display: inline-flex;
+  display: flex;
+  width: fit-content;
+  margin-left: auto;
   margin-top: 32px;
 }
 
