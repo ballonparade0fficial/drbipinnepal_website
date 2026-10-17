@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import InfoPill from "./InfoPill";
 
 function Expertise({ data }) {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.15 });
@@ -36,20 +37,34 @@ function Expertise({ data }) {
               >
                 <div className="expertise-header">
                   <span className="expertise-accent" aria-hidden="true" />
-                  <span className="expertise-title">{group.title}</span>
+                  <div>
+                    <span className="expertise-title">{group.title}</span>
+                    <span className="info-interaction-hint">
+                      Click or hover below for details
+                    </span>
+                  </div>
                 </div>
                 <div className="expertise-tags">
                   {items.map((tag, index) => (
-                    <motion.span
+                    <motion.div
                       key={tag}
-                      className="tag-pill"
                       initial={{ opacity: 0 }}
                       animate={inView ? { opacity: 1 } : {}}
                       transition={{ duration: 0.3, delay: 0.05 * index }}
-                      whileHover={{ scale: 1.05 }}
                     >
-                      {tag}
-                    </motion.span>
+                      <InfoPill
+                        pillClassName="tag-pill"
+                        info={{
+                          eyebrow: group.title,
+                          title: tag,
+                          description: `${tag} is part of Dr. Bipin Nepal's ${group.title.toLowerCase()} expertise in Transfusion Medicine.`,
+                          details:
+                            "Select this area to learn more about how it connects to his clinical practice, blood-service leadership, research, and professional education.",
+                        }}
+                      >
+                        {tag}
+                      </InfoPill>
+                    </motion.div>
                   ))}
                 </div>
               </motion.div>
