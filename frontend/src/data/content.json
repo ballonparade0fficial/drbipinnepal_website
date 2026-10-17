@@ -143,64 +143,94 @@
     "title": "Research Areas",
     "items": [
       {
-        "description": "Ensuring the safety of blood supply and donor screening.",
-        "title": "Transfusion-Transmissible Infections (TTIs)"
+        "description": "Studying donor screening and the prevalence of transfusion-transmissible infections, including the implications for blood safety in defined donor populations.",
+        "title": "Transfusion-Transmissible Infection Screening"
       },
       {
-        "description": "Addressing complex compatibility and antibody challenges.",
-        "title": "ABO Blood Group Discrepancies & Immunohematology"
+        "description": "Investigating discordant grouping results, unusual blood-group findings, acquired antigen changes, and practical immunohematology challenges.",
+        "title": "ABO Discrepancies & Immunohematology"
       },
       {
-        "description": "Monitoring and improving transfusion safety protocols.",
-        "title": "Hemovigilance Systems"
+        "description": "Understanding red-cell antibodies, alloimmunization, and suspected transfusion reactions to improve compatibility decisions and patient safety.",
+        "title": "Alloimmunization & Transfusion Reactions"
       },
       {
-        "description": "Developing clinical protocols and analyzing patient outcomes.",
-        "title": "COVID-19 Convalescent Plasma Therapy"
+        "description": "Examining how blood products are ordered, issued, and used, including the relationship between components requested and transfused.",
+        "title": "Blood-Component Utilization"
       },
       {
-        "description": "Reducing unnecessary transfusions and optimizing outcomes.",
+        "description": "Applying multidisciplinary, evidence-based approaches to optimize the patient's own blood, manage bleeding, and use transfusion appropriately in clinical care.",
         "title": "Patient Blood Management"
       },
       {
-        "description": "Advancing component therapy across Nepal.",
-        "title": "Blood Component Utilization"
+        "description": "Strengthening the reporting and analysis of adverse events and near misses as part of safer, more reliable transfusion practice.",
+        "title": "Haemovigilance & Transfusion Safety"
+      },
+      {
+        "description": "Examining the organization of transfusion services, quality systems, specialist training, traceability, and service development in Nepal.",
+        "title": "Blood-Service Systems & Quality Improvement"
+      },
+      {
+        "description": "Contributing to research and clinical learning from COVID-19 treatment and emergency transfusion care in resource-limited settings.",
+        "title": "COVID-19 & Emergency Transfusion Services"
       }
     ]
   },
   "expertise": {
     "title": "Expertise",
-    "subtitle": "Specialized knowledge across transfusion medicine, clinical practice, and public health",
+    "subtitle": "Specialized clinical, laboratory, quality, and leadership expertise across Transfusion Medicine",
     "groups": [
       {
         "tags": [
           "Transfusion Medicine",
+          "Tissue Typing",
+          "Immunohematology",
           "Blood Banking",
-          "Immunohematology"
+          "Transfusion Safety"
         ],
-        "title": "Core Specialization"
+        "title": "Core Specialty"
       },
       {
         "tags": [
-          "ABO Incompatibility Management",
+          "Compatibility Testing",
+          "ABO & Rh Discrepancies",
+          "Antibody Identification",
+          "Blood-Component Therapy",
           "Rare Blood Group Handling",
-          "Antibody Identification"
+          "Transfusion Reaction Investigation"
         ],
-        "title": "Clinical Skills"
+        "title": "Clinical & Laboratory Practice"
       },
       {
         "tags": [
-          "Peer-Reviewed Publications",
-          "Medical Dictionary Author"
+          "Transfusion Safety",
+          "Haemovigilance",
+          "Donor Infection Screening",
+          "Quality Management",
+          "Traceability & Incident Review",
+          "Staff Competency Assessment"
         ],
-        "title": "Research & Academic"
+        "title": "Quality & Safety"
       },
       {
         "tags": [
-          "COVID-19 Plasma Therapy",
-          "National Policy Advisory"
+          "Blood-Bank Management",
+          "Service Development",
+          "Patient Blood Management",
+          "Education & Capacity Building",
+          "Equipment & Inventory Planning",
+          "Clinical Governance"
         ],
-        "title": "Public Health"
+        "title": "Service & Leadership"
+      },
+      {
+        "tags": [
+          "AATM Professional Leadership",
+          "AABB Education Working Group",
+          "International Collaboration",
+          "Transfusion-Medicine Education"
+        ],
+        "title": "Professional & International Engagement"
       }
     ]
   },
@@ -208,19 +238,19 @@
     "title": "Impact",
     "stats": [
       {
-        "label": "Blood banks established",
+        "label": "Years of professional involvement",
         "suffix": "+",
-        "value": 20
+        "value": 11
       },
       {
-        "label": "Peer-reviewed publications",
+        "label": "Leadership settings",
         "suffix": "+",
-        "value": 30
+        "value": 3
       },
       {
-        "label": "Page medical dictionary",
+        "label": "Research focus areas",
         "suffix": "",
-        "value": 2000
+        "value": 6
       },
       {
         "label": "International society affiliations",
@@ -230,28 +260,28 @@
     ],
     "items": [
       {
-        "description": "Shifted Nepal from whole-blood to evidence-based component therapy.",
-        "title": "Transforming Clinical Practice"
+        "description": "Connects specialist clinical consultation with compatibility testing, blood-component therapy, and transfusion safety.",
+        "title": "Patient-Safe Transfusion Practice"
       },
       {
-        "description": "Helped establish ~20 blood banks, standardizing collection, screening, storage.",
-        "title": "Building National Infrastructure"
+        "description": "Contributes experience from hospital transfusion services, a medical-college setting, and a dedicated blood-transfusion centre.",
+        "title": "Blood-Service Development"
       },
       {
-        "description": "Led plasma therapy nationally, covered by national and international media.",
-        "title": "COVID-19 Leadership"
+        "description": "Brings together laboratory investigation, clinical interpretation, quality improvement, and operational service management.",
+        "title": "Clinical and Laboratory Integration"
       },
       {
-        "description": "Contributed to blood safety policies, hemovigilance, and transplantation guidelines.",
-        "title": "Policy and Advisory"
+        "description": "Supports dependable procedures through quality management, incident review, haemovigilance, and staff competency.",
+        "title": "Quality Systems and Haemovigilance"
       },
       {
-        "description": "30+ publications and a 2000-page medical dictionary advancing medical education.",
-        "title": "Academic Legacy"
+        "description": "Research addresses donor screening, ABO discrepancies, blood-component utilization, Patient Blood Management, and national service challenges.",
+        "title": "Research and Evidence-Based Practice"
       },
       {
-        "description": "Active in ISBT, AATM, EHA, ISTH for international knowledge exchange.",
-        "title": "Global Collaboration"
+        "description": "Contributes to professional education, capacity building, and collaboration through regional and international transfusion-medicine networks.",
+        "title": "Education and International Collaboration"
       }
     ]
   },
