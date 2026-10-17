@@ -75,7 +75,10 @@ function About({ data, site }) {
               <div>
                 <h2 className="section-title">{data.title}</h2>
                 <div className="about-quote">{site.tagline}</div>
-                <span className="info-interaction-hint">Click or hover below for details</span>
+                <span className="info-interaction-hint">
+                  <span className="desktop-hint">Click or hover below for details</span>
+                  <span className="mobile-hint">Tap below for details</span>
+                </span>
               </div>
             </div>
             <div className="about-badges">

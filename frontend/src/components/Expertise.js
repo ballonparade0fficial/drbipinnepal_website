@@ -40,7 +40,8 @@ function Expertise({ data }) {
                   <div>
                     <span className="expertise-title">{group.title}</span>
                     <span className="info-interaction-hint">
-                      Click or hover below for details
+                      <span className="desktop-hint">Click or hover below for details</span>
+                      <span className="mobile-hint">Tap below for details</span>
                     </span>
                   </div>
                 </div>
