@@ -1,7 +1,8 @@
 import React from "react";
 import Media from "./Media";
+import Footer from "./Footer";
 
-function MediaPage({ videos, site }) {
+function MediaPage({ videos, site, contact, quickLinks }) {
   return (
     <div className="app-shell media-page-shell">
       <header className="media-page-header">
@@ -11,6 +12,7 @@ function MediaPage({ videos, site }) {
             {site.name}
           </a>
           <a href="/" className="media-back-link">
+            <span aria-hidden="true">←</span>
             Back to homepage
           </a>
         </div>
@@ -18,6 +20,11 @@ function MediaPage({ videos, site }) {
       <main id="main-content">
         <Media videos={videos} fullPage />
       </main>
+      <Footer
+        content={{ site, contact }}
+        quickLinks={quickLinks}
+        isSubpage
+      />
     </div>
   );
 }

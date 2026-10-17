@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 import { FaFileAlt } from "react-icons/fa";
 
 function Publications({ publications = [], fullPage = false }) {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.12 });
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.01 });
 
   return (
     <section id="publications" className="section publications-section" ref={ref}>

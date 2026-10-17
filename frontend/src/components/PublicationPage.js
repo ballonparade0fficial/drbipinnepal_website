@@ -1,7 +1,8 @@
 import React from "react";
 import Publications from "./Publications";
+import Footer from "./Footer";
 
-function PublicationPage({ publications, site }) {
+function PublicationPage({ publications, site, contact, quickLinks }) {
   return (
     <div className="app-shell media-page-shell">
       <header className="media-page-header">
@@ -11,6 +12,7 @@ function PublicationPage({ publications, site }) {
             {site.name}
           </a>
           <a href="/" className="media-back-link">
+            <span aria-hidden="true">←</span>
             Back to homepage
           </a>
         </div>
@@ -18,6 +20,11 @@ function PublicationPage({ publications, site }) {
       <main id="main-content">
         <Publications publications={publications} fullPage />
       </main>
+      <Footer
+        content={{ site, contact }}
+        quickLinks={quickLinks}
+        isSubpage
+      />
     </div>
   );
 }
