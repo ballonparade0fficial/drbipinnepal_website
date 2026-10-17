@@ -15,5 +15,3 @@ build/
 test.html
 # Regenerable from content.json via scripts/make-seed.mjs
 scripts/seed.ndjson
-
-claude_plan.png
