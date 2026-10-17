@@ -1551,6 +1551,41 @@ textarea:focus-visible,
   flex-wrap: wrap;
 }
 
+.footer-icon-orbit {
+  position: relative;
+  display: grid;
+  place-items: end center;
+  width: 56px;
+  height: 66px;
+}
+
+.footer-icon-orbit-linkedin { width: 72px; }
+.footer-icon-orbit-scholar { width: 64px; }
+.footer-icon-orbit-researchgate { width: 92px; }
+
+.footer-icon-arc-label {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 56px;
+  height: 27px;
+  transform: translateX(-50%);
+  color: var(--accent-strong);
+  font-family: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.footer-icon-arc-label span {
+  position: absolute;
+  white-space: pre;
+}
+
+.footer-icon-orbit-email .footer-icon {
+  margin: 0;
+}
+
 .footer-icon {
   width: 40px;
   height: 40px;

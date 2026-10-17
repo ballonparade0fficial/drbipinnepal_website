@@ -19,6 +19,36 @@ import NotFound from "./components/NotFound";
 import videos from "./data/videos";
 import publications from "./data/publications";
 
+function FooterIconOrbit({ label, className = "", children }) {
+  const letters = [...label];
+  const spread = letters.length > 9 ? 5.8 : letters.length > 6 ? 6.8 : 8;
+  const angleStep = letters.length > 9 ? 3.5 : letters.length > 6 ? 4.5 : 7;
+
+  return (
+    <span className={`footer-icon-orbit ${className}`.trim()}>
+      <span className="footer-icon-arc-label" aria-hidden="true">
+        {letters.map((letter, index) => {
+          const offset = index - (letters.length - 1) / 2;
+          const distance = Math.abs(offset);
+          return (
+            <span
+              key={`${letter}-${index}`}
+              style={{
+                left: `calc(50% + ${offset * spread}px)`,
+                top: `${distance * 1.35}px`,
+                transform: `translateX(-50%) rotate(${offset * angleStep}deg)`,
+              }}
+            >
+              {letter}
+            </span>
+          );
+        })}
+      </span>
+      {children}
+    </span>
+  );
+}
+
 function App() {
   // Fixed at build time — the sync script writes content.json before the build.
   const content = contentData;
@@ -180,41 +210,49 @@ function App() {
             ))}
           </div>
           <div className="footer-icons">
-            <a className="footer-icon" href={`mailto:${content.contact.email}`} aria-label="Email">
-              <FiMail />
-            </a>
-            {content.contact.linkedin && (
-              <a
-                className="footer-icon"
-                href={content.contact.linkedin}
-                aria-label="LinkedIn"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedinIn />
+            <FooterIconOrbit label="Gmail" className="footer-icon-orbit-email">
+              <a className="footer-icon" href={`mailto:${content.contact.email}`} aria-label="Gmail">
+                <FiMail />
               </a>
+            </FooterIconOrbit>
+            {content.contact.linkedin && (
+              <FooterIconOrbit label="LinkedIn" className="footer-icon-orbit-linkedin">
+                <a
+                  className="footer-icon"
+                  href={content.contact.linkedin}
+                  aria-label="LinkedIn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaLinkedinIn />
+                </a>
+              </FooterIconOrbit>
             )}
             {content.contact.googleScholar && (
-              <a
-                className="footer-icon"
-                href={content.contact.googleScholar}
-                aria-label="Google Scholar"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaGraduationCap />
-              </a>
+              <FooterIconOrbit label="Scholar" className="footer-icon-orbit-scholar">
+                <a
+                  className="footer-icon"
+                  href={content.contact.googleScholar}
+                  aria-label="Google Scholar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaGraduationCap />
+                </a>
+              </FooterIconOrbit>
             )}
             {content.contact.researchGate && (
-              <a
-                className="footer-icon"
-                href={content.contact.researchGate}
-                aria-label="ResearchGate"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <SiResearchgate />
-              </a>
+              <FooterIconOrbit label="ResearchGate" className="footer-icon-orbit-researchgate">
+                <a
+                  className="footer-icon"
+                  href={content.contact.researchGate}
+                  aria-label="ResearchGate"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <SiResearchgate />
+                </a>
+              </FooterIconOrbit>
             )}
           </div>
         </div>
