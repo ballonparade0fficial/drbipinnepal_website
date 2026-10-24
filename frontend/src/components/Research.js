@@ -55,6 +55,7 @@ function Research({ data, profiles = {} }) {
                   title: item.title,
                   description: item.description,
                   details:
+                    item.details ||
                     "This research area connects with Dr. Bipin Nepal's work in transfusion medicine, blood-service development, patient safety, and evidence-based practice.",
                 }}
               >
