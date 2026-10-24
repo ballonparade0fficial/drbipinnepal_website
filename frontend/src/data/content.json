@@ -28,6 +28,10 @@
         "label": "Publications"
       },
       {
+        "id": "news",
+        "label": "News Coverage"
+      },
+      {
         "id": "expertise",
         "label": "Expertise"
       },

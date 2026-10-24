@@ -741,6 +741,98 @@ textarea:focus-visible,
   margin-top: 32px;
 }
 
+/* =============================================
+   NEWS COVERAGE
+   ============================================= */
+
+.news-section {
+  background: var(--bg-alt);
+}
+
+.news-intro {
+  margin-bottom: 32px;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.news-card {
+  display: flex;
+  min-height: 190px;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: rgba(247, 245, 240, 0.76);
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease,
+    background 0.22s ease;
+}
+
+.news-card:hover,
+.news-card:focus-visible {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  background: var(--surface);
+  box-shadow: var(--shadow-lift);
+}
+
+.news-card-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--accent-strong);
+}
+
+.news-card-topline svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.news-card-source {
+  font-family: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.news-card-title {
+  margin-top: 18px;
+  color: var(--ink);
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.news-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: auto;
+  padding-top: 18px;
+  color: var(--accent2);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.news-card-link svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.2s ease;
+}
+
+.news-card:hover .news-card-link svg,
+.news-card:focus-visible .news-card-link svg {
+  transform: translate(2px, -2px);
+}
+
 .stat-card[href],
 .about-stat[href] {
   cursor: pointer;
@@ -1820,6 +1912,7 @@ textarea:focus-visible,
   .footer-columns { grid-template-columns: 1fr 1fr; }
   .impact-stats { grid-template-columns: repeat(2, 1fr); gap: 20px 24px; }
   .footer-navigation { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .news-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 900px) {
@@ -1850,6 +1943,7 @@ textarea:focus-visible,
   .about-accent { width: 100%; height: 3px; align-self: auto; }
   .media-grid { grid-template-columns: 1fr; }
   .publications-grid { grid-template-columns: 1fr; }
+  .news-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {

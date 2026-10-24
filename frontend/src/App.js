@@ -14,9 +14,11 @@ import Publications from "./components/Publications";
 import PublicationPage from "./components/PublicationPage";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import NewsCoverage from "./components/NewsCoverage";
 import NotFound from "./components/NotFound";
 import videos from "./data/videos";
 import publications from "./data/publications";
+import newsCoverage from "./data/news";
 
 function App() {
   // Fixed at build time — the sync script writes content.json before the build.
@@ -75,7 +77,7 @@ function App() {
   const isPublicationRoute = window.location.pathname === "/publication";
 
   const quickLinks = content.navbar.links.filter((link) =>
-    ["hero", "about", "research", "publications", "media", "contact"].includes(link.id)
+    ["hero", "about", "research", "publications", "news", "media", "contact"].includes(link.id)
   );
 
   const handleBackToTop = () => {
@@ -178,6 +180,7 @@ function App() {
         <Achievements data={content.achievements} />
         <Research data={content.research} profiles={content.contact} />
         <Publications publications={publications.slice(0, 6)} />
+        <NewsCoverage items={newsCoverage} />
         <Expertise data={content.expertise} />
         <Impact data={content.impact} />
         <Media videos={videos.slice(0, 6)} />
