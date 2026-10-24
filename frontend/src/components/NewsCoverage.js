@@ -3,23 +3,23 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FiArrowUpRight, FiExternalLink } from "react-icons/fi";
 
-function NewsCoverage({ items = [] }) {
+function NewsCoverage({ items = [], content = {} }) {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.01 });
 
   return (
     <section id="news" className="section news-section" ref={ref}>
       <div className="container">
-        <span className="eyebrow section-eyebrow">In the Press</span>
+        <span className="eyebrow section-eyebrow">{content.eyebrow || "In the Press"}</span>
         <motion.h2
           className="section-title"
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.55 }}
         >
-          News Coverage
+          {content.title || "News Coverage"}
         </motion.h2>
         <p className="section-subtitle news-intro">
-          Selected interviews, features, and media coverage about Dr. Bipin Nepal&apos;s work.
+          {content.intro || "Selected interviews, features, and media coverage about Dr. Bipin Nepal's work."}
         </p>
 
         <div className="news-grid">

@@ -7,6 +7,9 @@ import {research} from './research'
 import {expertise} from './expertise'
 import {impact} from './impact'
 import {contact} from './contact'
+import {media} from './media'
+import {publications} from './publications'
+import {newsCoverage} from './newsCoverage'
 
 export const schemaTypes = [
   site,
@@ -18,6 +21,9 @@ export const schemaTypes = [
   expertise,
   impact,
   contact,
+  media,
+  publications,
+  newsCoverage,
 ]
 
 /**

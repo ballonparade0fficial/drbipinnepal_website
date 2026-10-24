@@ -3,23 +3,25 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FaFileAlt } from "react-icons/fa";
 
-function Publications({ publications = [], fullPage = false }) {
+function Publications({ publications = [], content = {}, fullPage = false }) {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.01 });
 
   return (
     <section id="publications" className="section publications-section" ref={ref}>
       <div className="container">
-        <span className="eyebrow section-eyebrow">Research &amp; Writing</span>
+        <span className="eyebrow section-eyebrow">
+          {content.eyebrow || "Research & Writing"}
+        </span>
         <motion.h2
           className="section-title"
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.55 }}
         >
-          Publications
+          {content.title || "Publications"}
         </motion.h2>
         <p className="section-subtitle publications-intro">
-          Selected research, clinical studies, and academic contributions.
+          {content.intro || "Selected research, clinical studies, and academic contributions."}
         </p>
 
         <div className="publications-grid">
@@ -45,7 +47,7 @@ function Publications({ publications = [], fullPage = false }) {
 
         {!fullPage && (
           <a href="/publication" className="btn btn-primary publication-more-link">
-            Show More Publications
+            {content.showMoreLabel || "Show More Publications"}
           </a>
         )}
       </div>

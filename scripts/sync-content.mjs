@@ -56,7 +56,10 @@ const QUERY = `{
   },
   "contact": *[_id == "contact"][0]{
     title, email, location, note, linkedin, googleScholar, researchGate
-  }
+  },
+  "publications": *[_id == "publications"][0]{eyebrow, title, intro, showMoreLabel, items[]{_key, title, url}},
+  "newsCoverage": *[_id == "newsCoverage"][0]{eyebrow, title, intro, items[]{_key, title, source, url}},
+  "media": *[_id == "media"][0]{eyebrow, title, intro, showMoreLabel, videos[]{_key, title, url}}
 }`
 
 async function fetchContent() {
@@ -150,6 +153,26 @@ function shape(data, imagePath) {
       items: data.impact?.items ?? [],
     },
     contact: data.contact,
+    publications: {
+      eyebrow: data.publications?.eyebrow,
+      title: data.publications?.title,
+      intro: data.publications?.intro,
+      showMoreLabel: data.publications?.showMoreLabel,
+      items: data.publications?.items ?? [],
+    },
+    newsCoverage: {
+      eyebrow: data.newsCoverage?.eyebrow,
+      title: data.newsCoverage?.title,
+      intro: data.newsCoverage?.intro,
+      items: data.newsCoverage?.items ?? [],
+    },
+    media: {
+      eyebrow: data.media?.eyebrow,
+      title: data.media?.title,
+      intro: data.media?.intro,
+      showMoreLabel: data.media?.showMoreLabel,
+      videos: data.media?.videos ?? [],
+    },
   }
 }
 

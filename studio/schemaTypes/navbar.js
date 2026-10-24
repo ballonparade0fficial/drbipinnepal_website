@@ -14,6 +14,9 @@ const SECTION_IDS = [
   {title: 'Expertise', value: 'expertise'},
   {title: 'Impact', value: 'impact'},
   {title: 'Contact', value: 'contact'},
+  {title: 'Publications', value: 'publications'},
+  {title: 'News Coverage', value: 'news'},
+  {title: 'Media', value: 'media'},
 ]
 
 export const navbar = defineType({

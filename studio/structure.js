@@ -18,6 +18,9 @@ const ORDER = [
   ['expertise', 'Expertise'],
   ['impact', 'Impact'],
   ['contact', 'Contact'],
+  ['publications', 'Publications'],
+  ['newsCoverage', 'News Coverage'],
+  ['media', 'Media / Videos'],
 ]
 
 export const structure = (S) =>

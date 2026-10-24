@@ -28,6 +28,31 @@ const withKeys = (items = []) =>
 
 const content = JSON.parse(await readFile(CONTENT_FILE, 'utf8'))
 
+// The three long-form collections historically lived in small frontend data
+// modules. Read them as a one-time migration fallback so the first Sanity
+// import contains the complete site rather than only the section documents.
+async function readDefaultArray(filename, variable, replacements = {}) {
+  const source = await readFile(path.join(ROOT, 'frontend/src/data', filename), 'utf8')
+  const declaration = `const ${variable} =`
+  const start = source.indexOf(declaration)
+  const endMarker = source.indexOf('];\n\nexport', start)
+  const end = endMarker < 0 ? -1 : endMarker + 1
+  if (start < 0 || end < 0) throw new Error(`Could not read ${filename}`)
+
+  let expression = source.slice(start + declaration.length, end).trim()
+  for (const [from, to] of Object.entries(replacements)) expression = expression.replaceAll(from, to)
+  return Function(`return (${expression})`)()
+}
+
+const defaultVideos = await readDefaultArray('videos.js', 'videos', {
+  defaultVideoTitle: JSON.stringify('Dr. Bipin Nepal — Featured Video'),
+})
+const defaultPublications = await readDefaultArray('publications.js', 'publications')
+const defaultNewsCoverage = await readDefaultArray('news.js', 'newsCoverage')
+const publications = content.publications?.items?.length ? content.publications.items : defaultPublications
+const newsCoverage = content.newsCoverage?.items?.length ? content.newsCoverage.items : defaultNewsCoverage
+const videos = content.media?.videos?.length ? content.media.videos : defaultVideos
+
 const documents = [
   {
     _id: 'site',
@@ -104,6 +129,32 @@ const documents = [
     linkedin: 'https://www.linkedin.com/in/dr-bipin-nepal-145996101/',
     googleScholar: 'https://scholar.google.com/citations?user=iKT_AVoAAAAJ&hl=en',
     researchGate: 'https://www.researchgate.net/profile/Bipin-Nepal',
+  },
+  {
+    _id: 'publications',
+    _type: 'publications',
+    eyebrow: content.publications?.eyebrow || 'Research & Writing',
+    title: content.publications?.title || 'Publications',
+    intro: content.publications?.intro || 'Selected research, clinical studies, and academic contributions.',
+    showMoreLabel: content.publications?.showMoreLabel || 'Show More Publications',
+    items: withKeys(publications),
+  },
+  {
+    _id: 'newsCoverage',
+    _type: 'newsCoverage',
+    eyebrow: content.newsCoverage?.eyebrow || 'In the Press',
+    title: content.newsCoverage?.title || 'News Coverage',
+    intro: content.newsCoverage?.intro || "Selected interviews, features, and media coverage about Dr. Bipin Nepal's work.",
+    items: withKeys(newsCoverage),
+  },
+  {
+    _id: 'media',
+    _type: 'media',
+    eyebrow: content.media?.eyebrow || 'Watch & Learn',
+    title: content.media?.title || 'Media',
+    intro: content.media?.intro || "Videos featuring Dr. Bipin Nepal's work and perspectives.",
+    showMoreLabel: content.media?.showMoreLabel || 'Show More Videos',
+    videos: withKeys(videos),
   },
 ]
 

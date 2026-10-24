@@ -2,7 +2,7 @@ import React from "react";
 import Media from "./Media";
 import Footer from "./Footer";
 
-function MediaPage({ videos, site, contact, quickLinks }) {
+function MediaPage({ videos, media, site, contact, quickLinks }) {
   return (
     <div className="app-shell media-page-shell">
       <header className="media-page-header">
@@ -23,7 +23,7 @@ function MediaPage({ videos, site, contact, quickLinks }) {
         </div>
       </header>
       <main id="main-content">
-        <Media videos={videos} fullPage />
+        <Media videos={videos} content={media} fullPage />
       </main>
       <Footer
         content={{ site, contact }}

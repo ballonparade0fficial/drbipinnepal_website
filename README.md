@@ -70,6 +70,32 @@ Roughly 1–2 minutes end to end.
 - Every content type is a **singleton** — one Hero, one About, etc. — pinned by fixed document id in
   `studio/structure.js`. Duplicate/delete are disabled so a section can't be accidentally removed.
 
+### Client editing guide
+
+Open the Studio and use the **Website Content** menu. Each menu item controls the matching area of
+the website:
+
+| Studio item | What the client can edit |
+| --- | --- |
+| Site Details | Name, tagline, and site description |
+| Navigation | Menu labels and the section each label opens |
+| Home / Hero | Introduction, portrait, headline figures, and links shown by the figures |
+| About | Biography, credential pills, their glass-screen details, and affiliations |
+| Achievements | Career highlights; drag items to reorder them |
+| Research Areas | Research cards, descriptions, details, and icons |
+| Expertise | Skill groups and the individual glass-screen details for every skill pill |
+| Impact | Headline figures and impact rows |
+| Publications | Publication titles and links; the first six appear on the home page and the rest on `/publication` |
+| News Coverage | News headline, source, and article link for each coverage card |
+| Media / Videos | YouTube URL and title for each video; the first six appear on the home page and the rest on `/media` |
+| Contact | Email, location, social profiles, and closing note |
+
+For the About, Research Areas, and Expertise glass screens, edit the nested detail item rather than
+the visual component. A new item in the relevant array automatically creates a new card or pill.
+After pressing **Publish**, the configured webhook syncs the content into the repository and Vercel
+deploys the updated site. The site still keeps local fallback data for the long-form collections, so
+an incomplete first-time setup cannot blank the public page.
+
 ### First-time setup
 
 ```bash

@@ -2,7 +2,7 @@ import React from "react";
 import Publications from "./Publications";
 import Footer from "./Footer";
 
-function PublicationPage({ publications, site, contact, quickLinks }) {
+function PublicationPage({ publications, publicationContent, site, contact, quickLinks }) {
   return (
     <div className="app-shell media-page-shell">
       <header className="media-page-header">
@@ -23,7 +23,7 @@ function PublicationPage({ publications, site, contact, quickLinks }) {
         </div>
       </header>
       <main id="main-content">
-        <Publications publications={publications} fullPage />
+        <Publications publications={publications} content={publicationContent} fullPage />
       </main>
       <Footer
         content={{ site, contact }}

@@ -16,13 +16,23 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import NewsCoverage from "./components/NewsCoverage";
 import NotFound from "./components/NotFound";
-import videos from "./data/videos";
-import publications from "./data/publications";
-import newsCoverage from "./data/news";
+import fallbackVideos from "./data/videos";
+import fallbackPublications from "./data/publications";
+import fallbackNewsCoverage from "./data/news";
 
 function App() {
   // Fixed at build time — the sync script writes content.json before the build.
   const content = contentData;
+  const media = content.media?.videos?.length ? content.media : {videos: fallbackVideos};
+  const publicationsData = content.publications?.items?.length
+    ? content.publications
+    : {items: fallbackPublications};
+  const newsData = content.newsCoverage?.items?.length
+    ? content.newsCoverage
+    : {items: fallbackNewsCoverage};
+  const videos = media.videos;
+  const publications = publicationsData.items;
+  const newsCoverage = newsData.items;
   const [scrolled, setScrolled] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -90,6 +100,7 @@ function App() {
     return (
       <MediaPage
         videos={videos}
+        media={media}
         site={content.site}
         contact={content.contact}
         quickLinks={quickLinks}
@@ -101,6 +112,7 @@ function App() {
     return (
       <PublicationPage
         publications={publications}
+        publicationContent={publicationsData}
         site={content.site}
         contact={content.contact}
         quickLinks={quickLinks}
@@ -179,11 +191,11 @@ function App() {
         <About data={content.about} site={content.site} />
         <Achievements data={content.achievements} />
         <Research data={content.research} profiles={content.contact} />
-        <Publications publications={publications.slice(0, 6)} />
-        <NewsCoverage items={newsCoverage} />
+        <Publications publications={publications.slice(0, 6)} content={publicationsData} />
+        <NewsCoverage items={newsCoverage} content={newsData} />
         <Expertise data={content.expertise} />
         <Impact data={content.impact} />
-        <Media videos={videos.slice(0, 6)} />
+        <Media videos={videos.slice(0, 6)} content={media} />
         <Contact data={content.contact} />
       </main>
       <Footer content={content} quickLinks={quickLinks} />
