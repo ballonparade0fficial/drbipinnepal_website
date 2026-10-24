@@ -77,7 +77,7 @@ the website:
 
 | Studio item | What the client can edit |
 | --- | --- |
-| Site Details | Name, tagline, and site description |
+| Brand & Footer Settings | Display name and professional tagline used in the header, About section, and footer |
 | Navigation | Menu labels and the section each label opens |
 | Home / Hero | Introduction, portrait, headline figures, and links shown by the figures |
 | About | Biography, credential pills, their glass-screen details, and affiliations |
@@ -99,8 +99,17 @@ an incomplete first-time setup cannot blank the public page.
 ### First-time setup
 
 ```bash
-node scripts/make-seed.mjs                                    # content.json → seed.ndjson
+node scripts/make-seed.mjs                                    # all current content → seed.ndjson
 cd studio && npx sanity dataset import ../scripts/seed.ndjson production
+```
+
+For a staged migration, generate only one content batch at a time:
+
+```bash
+node scripts/make-seed.mjs first   # Site, Navigation, Home / Hero, About
+node scripts/make-seed.mjs second  # Achievements, Research, Expertise, Impact
+node scripts/make-seed.mjs third   # Contact, Publications, News Coverage, Media
+node scripts/make-seed.mjs collections # Publications and Media only
 ```
 
 Then in Sanity: add a webhook pointing at GitHub's `repository_dispatch` endpoint with event type

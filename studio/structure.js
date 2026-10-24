@@ -9,18 +9,18 @@ import {SINGLETON_TYPES} from './schemaTypes'
  * The order below mirrors the order of the sections on the live site.
  */
 const ORDER = [
-  ['site', 'Site Details'],
-  ['navbar', 'Navigation'],
-  ['hero', 'Home / Hero'],
-  ['about', 'About'],
-  ['achievements', 'Achievements'],
-  ['research', 'Research Areas'],
-  ['expertise', 'Expertise'],
-  ['impact', 'Impact'],
-  ['contact', 'Contact'],
-  ['publications', 'Publications'],
-  ['newsCoverage', 'News Coverage'],
-  ['media', 'Media / Videos'],
+  ['site', 'Brand & Footer Settings'],
+  ['navbar', 'Main Navigation'],
+  ['hero', 'Home / Hero Introduction'],
+  ['about', 'About / Professional Profile'],
+  ['achievements', 'Achievements / Career Highlights'],
+  ['research', 'Research Areas / Focus Cards'],
+  ['expertise', 'Expertise / Skills'],
+  ['impact', 'Impact / Results'],
+  ['contact', 'Contact & Social Profiles'],
+  ['publications', 'Publications / Research & Writing'],
+  ['newsCoverage', 'News Coverage / Press Mentions'],
+  ['media', 'Media / YouTube Videos'],
 ]
 
 export const structure = (S) =>

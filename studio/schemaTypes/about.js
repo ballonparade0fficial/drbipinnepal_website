@@ -4,14 +4,20 @@ import {TagIcon} from '@sanity/icons/Tag'
 
 export const about = defineType({
   name: 'about',
-  title: 'About',
+  title: 'About / Professional Profile',
   type: 'document',
   icon: UserIcon,
+  fieldsets: [
+    {name: 'biography', title: 'Biography', options: {collapsible: false}},
+    {name: 'credentials', title: 'Interactive credentials', options: {collapsible: true}},
+    {name: 'affiliations', title: 'Professional affiliations', options: {collapsible: true}},
+  ],
   fields: [
     defineField({
       name: 'title',
       title: 'Section heading',
       type: 'string',
+      fieldset: 'biography',
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -19,6 +25,7 @@ export const about = defineType({
       title: 'Biography',
       type: 'text',
       rows: 10,
+      fieldset: 'biography',
       description: 'The main biography paragraph. This is the part visitors actually read — the more substance here, the better.',
       validation: (rule) => rule.required(),
     }),
@@ -26,14 +33,17 @@ export const about = defineType({
       name: 'badges',
       title: 'Credentials',
       type: 'array',
+      hidden: true,
+      fieldset: 'credentials',
       description: 'Short qualification pills, e.g. "MBBS • Dow University".',
       of: [defineArrayMember({type: 'string'})],
     }),
     defineField({
       name: 'badgeDetails',
-      title: 'Credential details',
+      title: 'Credential pills & glass-screen details',
       type: 'array',
-      description: 'The label and extra information shown when a credential pill is clicked.',
+      fieldset: 'credentials',
+      description: 'These are the clickable pills shown in About. Add one item for each pill; its description and details appear in the glass screen.',
       of: [
         defineArrayMember({
           type: 'object',
@@ -73,12 +83,14 @@ export const about = defineType({
       name: 'affiliationsLabel',
       title: 'Affiliations label',
       type: 'string',
+      fieldset: 'affiliations',
       description: 'The small heading above the societies, e.g. "Member of".',
     }),
     defineField({
       name: 'affiliations',
       title: 'Professional affiliations',
       type: 'array',
+      fieldset: 'affiliations',
       of: [
         defineArrayMember({
           type: 'object',
@@ -117,6 +129,6 @@ export const about = defineType({
     }),
   ],
   preview: {
-    prepare: () => ({title: 'About'}),
+    prepare: () => ({title: 'About / Professional Profile'}),
   },
 })

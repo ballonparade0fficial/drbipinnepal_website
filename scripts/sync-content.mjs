@@ -34,7 +34,7 @@ const IMAGES_DIR = path.join(ROOT, 'frontend/public/images')
 // Singletons are fetched by their fixed document id. Using the plain id (not
 // `drafts.<id>`) means we only ever publish content the editor has published.
 const QUERY = `{
-  "site": *[_id == "site"][0]{name, tagline, description},
+  "site": *[_id == "site"][0]{name, tagline},
   "navbar": *[_id == "navbar"][0]{brand, links[]{label, id}},
   "hero": *[_id == "hero"][0]{
     title, field, location, description, tagline,
@@ -47,7 +47,7 @@ const QUERY = `{
     affiliations[]{acronym, name, url}
   },
   "achievements": *[_id == "achievements"][0]{title, items[]{title, description}},
-  "research": *[_id == "research"][0]{title, items[]{title, description, icon}},
+  "research": *[_id == "research"][0]{title, items[]{_key, title, description, details, icon}},
   "expertise": *[_id == "expertise"][0]{title, subtitle, groups[]{_key, title, tags, tagDetails[]{_key, label, eyebrow, title, description, details}}},
   "impact": *[_id == "impact"][0]{
     title,

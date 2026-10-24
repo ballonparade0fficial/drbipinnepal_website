@@ -19,6 +19,7 @@ import {fileURLToPath} from 'node:url'
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const CONTENT_FILE = path.join(ROOT, 'frontend/src/data/content.json')
 const OUT_FILE = path.join(ROOT, 'scripts/seed.ndjson')
+const requestedBatch = process.argv[2] || 'all'
 
 // Sanity requires a unique _key on every array item.
 const withKeys = (items = []) =>
@@ -59,7 +60,6 @@ const documents = [
     _type: 'site',
     name: content.site.name,
     tagline: content.site.tagline,
-    description: content.site.description,
   },
   {
     _id: 'navbar',
@@ -158,5 +158,20 @@ const documents = [
   },
 ]
 
-await writeFile(OUT_FILE, documents.map((doc) => JSON.stringify(doc)).join('\n') + '\n')
-console.log(`Wrote ${documents.length} documents to ${path.relative(ROOT, OUT_FILE)}`)
+const batches = {
+  first: ['site', 'navbar', 'hero', 'about'],
+  second: ['achievements', 'research', 'expertise', 'impact'],
+  third: ['contact', 'publications', 'newsCoverage', 'media'],
+  collections: ['publications', 'media'],
+  all: documents.map((doc) => doc._id),
+}
+
+if (!batches[requestedBatch]) {
+  throw new Error(`Unknown seed batch "${requestedBatch}". Use first, second, third, collections, or all.`)
+}
+
+const selectedDocuments = documents.filter((doc) => batches[requestedBatch].includes(doc._id))
+await writeFile(OUT_FILE, selectedDocuments.map((doc) => JSON.stringify(doc)).join('\n') + '\n')
+console.log(
+  `Wrote ${selectedDocuments.length} documents (${requestedBatch} batch) to ${path.relative(ROOT, OUT_FILE)}`,
+)

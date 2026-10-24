@@ -4,20 +4,27 @@ import {iconField} from './shared/iconField'
 
 export const impact = defineType({
   name: 'impact',
-  title: 'Impact',
+  title: 'Impact / Results',
   type: 'document',
   icon: TrendUpwardIcon,
+  fieldsets: [
+    {name: 'heading', title: 'Section heading', options: {collapsible: false}},
+    {name: 'stats', title: 'Impact figures', options: {collapsible: true}},
+    {name: 'items', title: 'Impact areas', options: {collapsible: true}},
+  ],
   fields: [
     defineField({
       name: 'title',
-      title: 'Section heading',
+      title: 'Impact heading',
       type: 'string',
+      fieldset: 'heading',
       validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'stats',
       title: 'Headline figures',
       type: 'array',
+      fieldset: 'stats',
       description: 'The row of large numbers at the top of the section.',
       of: [
         defineArrayMember({
@@ -26,7 +33,7 @@ export const impact = defineType({
           fields: [
             defineField({
               name: 'value',
-              title: 'Number',
+              title: 'Figure number',
               type: 'number',
               validation: (rule) => rule.required().min(0),
             }),
@@ -38,7 +45,7 @@ export const impact = defineType({
             }),
             defineField({
               name: 'label',
-              title: 'Label',
+              title: 'Figure label',
               type: 'string',
               validation: (rule) => rule.required(),
             }),
@@ -57,6 +64,7 @@ export const impact = defineType({
       name: 'items',
       title: 'Areas of impact',
       type: 'array',
+      fieldset: 'items',
       description: 'The list below the figures.',
       of: [
         defineArrayMember({
@@ -65,13 +73,13 @@ export const impact = defineType({
           fields: [
             defineField({
               name: 'title',
-              title: 'Area',
+              title: 'Impact area title',
               type: 'string',
               validation: (rule) => rule.required(),
             }),
             defineField({
               name: 'description',
-              title: 'Description',
+              title: 'Impact area explanation',
               type: 'text',
               rows: 3,
               validation: (rule) => rule.required(),
@@ -86,6 +94,6 @@ export const impact = defineType({
     }),
   ],
   preview: {
-    prepare: () => ({title: 'Impact'}),
+    prepare: () => ({title: 'Impact / Results'}),
   },
 })

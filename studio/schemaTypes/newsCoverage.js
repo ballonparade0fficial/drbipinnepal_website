@@ -3,33 +3,44 @@ import {DocumentTextIcon} from '@sanity/icons/DocumentText'
 
 export const newsCoverage = defineType({
   name: 'newsCoverage',
-  title: 'News Coverage',
+  title: 'News Coverage / Press Mentions',
   type: 'document',
   icon: DocumentTextIcon,
+  fieldsets: [
+    {name: 'heading', title: 'News section', options: {collapsible: false}},
+    {name: 'items', title: 'Press links', options: {collapsible: true}},
+  ],
   fields: [
-    defineField({name: 'eyebrow', title: 'Small label', type: 'string', initialValue: 'In the Press'}),
-    defineField({name: 'title', title: 'Section heading', type: 'string', validation: (rule) => rule.required()}),
-    defineField({name: 'intro', title: 'Introduction', type: 'text', rows: 3}),
+    defineField({name: 'eyebrow', title: 'Small label above heading', type: 'string', fieldset: 'heading', initialValue: 'In the Press'}),
+    defineField({name: 'title', title: 'News section heading', type: 'string', fieldset: 'heading', validation: (rule) => rule.required()}),
+    defineField({name: 'intro', title: 'Introductory text', type: 'text', rows: 3, fieldset: 'heading'}),
     defineField({
       name: 'items',
       title: 'Coverage links',
       type: 'array',
-      description: 'Add a headline, publication/source name, and the news article URL.',
+      fieldset: 'items',
+      description: 'Add one item for each interview, article, or press mention.',
       of: [
         defineArrayMember({
           type: 'object',
           name: 'coverageItem',
           fields: [
-            defineField({name: 'title', title: 'Headline', type: 'string', validation: (rule) => rule.required()}),
-            defineField({name: 'source', title: 'Source / publication', type: 'string', validation: (rule) => rule.required()}),
+            defineField({name: 'title', title: 'Article headline', type: 'string', validation: (rule) => rule.required()}),
+            defineField({name: 'source', title: 'News outlet / source name', type: 'string', validation: (rule) => rule.required()}),
             defineField({
               name: 'url',
-              title: 'Article link',
+              title: 'Article URL',
               type: 'url',
               validation: (rule) => rule.required().uri({scheme: ['http', 'https']}),
             }),
           ],
-          preview: {select: {title: 'title', subtitle: 'source'}},
+          preview: {
+            select: {title: 'title', subtitle: 'source'},
+            prepare: ({title, subtitle}) => ({
+              title: title || 'Add article headline',
+              subtitle: subtitle || 'Add news outlet / source name',
+            }),
+          },
         }),
       ],
     }),

@@ -3,39 +3,50 @@ import {HomeIcon} from '@sanity/icons/Home'
 
 export const hero = defineType({
   name: 'hero',
-  title: 'Home / Hero',
+  title: 'Home / Hero Introduction',
   type: 'document',
   icon: HomeIcon,
+  fieldsets: [
+    {name: 'intro', title: 'Home page introduction', options: {collapsible: false}},
+    {name: 'portrait', title: 'Portrait image', options: {collapsible: true}},
+    {name: 'stats', title: 'Headline figures', options: {collapsible: true}},
+  ],
   fields: [
     defineField({
       name: 'title',
-      title: 'Name (large heading)',
+      title: 'Large heading / name',
       type: 'string',
+      fieldset: 'intro',
+      description: 'The main name shown in the large hero heading.',
       validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'field',
       title: 'Field / role',
       type: 'string',
-      description: 'Shown in the small label above the name, e.g. "Researcher in Transfusion Medicine".',
+      fieldset: 'intro',
+      description: 'The professional field shown above the name, e.g. "Transfusion Medicine Specialist".',
     }),
     defineField({
       name: 'location',
       title: 'Location',
       type: 'string',
-      description: 'Shown next to the field label, e.g. "Kathmandu, Nepal".',
+      fieldset: 'intro',
+      description: 'Shown beside the professional field, e.g. "Kathmandu, Nepal".',
     }),
     defineField({
       name: 'description',
       title: 'Introduction',
       type: 'text',
       rows: 3,
+      fieldset: 'intro',
       description: 'The paragraph directly under the name.',
     }),
     defineField({
       name: 'tagline',
       title: 'Byline',
       type: 'string',
+      fieldset: 'intro',
       description: 'The single accented line under the introduction.',
     }),
     defineField({
@@ -43,6 +54,7 @@ export const hero = defineType({
       title: 'Portrait photo',
       type: 'image',
       options: {hotspot: true},
+      fieldset: 'portrait',
       description:
         'Uploaded here, then copied into the site during publishing — the live site never depends on Sanity to serve it.',
       fields: [
@@ -58,6 +70,7 @@ export const hero = defineType({
       name: 'stats',
       title: 'Headline figures',
       type: 'array',
+      fieldset: 'stats',
       description: 'The small cards under the buttons. Four fits the layout best.',
       of: [
         defineArrayMember({
@@ -97,6 +110,6 @@ export const hero = defineType({
     }),
   ],
   preview: {
-    prepare: () => ({title: 'Home / Hero'}),
+    prepare: () => ({title: 'Home / Hero Introduction'}),
   },
 })

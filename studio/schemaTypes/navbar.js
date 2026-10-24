@@ -21,7 +21,7 @@ const SECTION_IDS = [
 
 export const navbar = defineType({
   name: 'navbar',
-  title: 'Navigation',
+  title: 'Main Navigation',
   type: 'document',
   icon: MenuIcon,
   fields: [
@@ -29,13 +29,14 @@ export const navbar = defineType({
       name: 'brand',
       title: 'Brand name',
       type: 'string',
-      description: 'Shown at the top left of the navigation bar.',
+      description: 'Shown at the top left of the header. Usually the doctor’s name.',
       validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'links',
-      title: 'Menu links',
+      title: 'Menu items',
       type: 'array',
+      description: 'Drag to reorder the header menu. Each item points to one section on the website.',
       validation: (rule) => rule.min(1),
       of: [
         defineArrayMember({
@@ -51,8 +52,9 @@ export const navbar = defineType({
             }),
             defineField({
               name: 'id',
-              title: 'Links to section',
+              title: 'Home section to open',
               type: 'string',
+              description: 'Choose the section this menu item should scroll to.',
               options: {list: SECTION_IDS},
               validation: (rule) => rule.required(),
             }),
@@ -65,6 +67,6 @@ export const navbar = defineType({
     }),
   ],
   preview: {
-    prepare: () => ({title: 'Navigation'}),
+    prepare: () => ({title: 'Main Navigation'}),
   },
 })

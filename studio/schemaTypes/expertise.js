@@ -4,14 +4,19 @@ import {TagIcon} from '@sanity/icons/Tag'
 
 export const expertise = defineType({
   name: 'expertise',
-  title: 'Expertise',
+  title: 'Expertise / Skills',
   type: 'document',
   icon: BulbOutlineIcon,
+  fieldsets: [
+    {name: 'heading', title: 'Section heading', options: {collapsible: false}},
+    {name: 'groups', title: 'Skill groups and interactive pills', options: {collapsible: true}},
+  ],
   fields: [
     defineField({
       name: 'title',
-      title: 'Section heading',
+      title: 'Expertise heading',
       type: 'string',
+      fieldset: 'heading',
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -19,11 +24,13 @@ export const expertise = defineType({
       title: 'Subtitle',
       type: 'text',
       rows: 2,
+      fieldset: 'heading',
     }),
     defineField({
       name: 'groups',
       title: 'Skill groups',
       type: 'array',
+      fieldset: 'groups',
       description: 'Each group owns its own skills, so reordering one never affects another.',
       of: [
         defineArrayMember({
@@ -32,7 +39,7 @@ export const expertise = defineType({
           fields: [
             defineField({
               name: 'title',
-              title: 'Group name',
+              title: 'Skill group name',
               type: 'string',
               description: 'e.g. Core Specialization',
               validation: (rule) => rule.required(),
@@ -41,14 +48,16 @@ export const expertise = defineType({
               name: 'tags',
               title: 'Skills',
               type: 'array',
+              hidden: true,
+              description: 'Legacy list retained for compatibility. Edit the individual items under Skill pills instead.',
               of: [defineArrayMember({type: 'string'})],
               validation: (rule) => rule.min(1).unique(),
             }),
             defineField({
               name: 'tagDetails',
-              title: 'Skill details',
+              title: 'Skill pills & glass-screen details',
               type: 'array',
-              description: 'Editable information shown when a skill pill is clicked.',
+              description: 'Add one item for each visible skill pill. Every item has its own editable glass-screen content.',
               of: [
                 defineArrayMember({
                   type: 'object',
@@ -62,20 +71,18 @@ export const expertise = defineType({
                       validation: (rule) => rule.required(),
                     }),
                     defineField({name: 'eyebrow', title: 'Small category label', type: 'string'}),
-                    defineField({name: 'title', title: 'Dialog title', type: 'string'}),
+                    defineField({name: 'title', title: 'Glass-screen title', type: 'string'}),
                     defineField({
                       name: 'description',
-                      title: 'Short description',
+                      title: 'Pill summary',
                       type: 'text',
                       rows: 3,
-                      validation: (rule) => rule.required(),
                     }),
                     defineField({
                       name: 'details',
-                      title: 'Dialog details',
+                      title: 'Glass-screen details',
                       type: 'text',
                       rows: 5,
-                      validation: (rule) => rule.required(),
                     }),
                   ],
                   preview: {
@@ -97,6 +104,6 @@ export const expertise = defineType({
     }),
   ],
   preview: {
-    prepare: () => ({title: 'Expertise'}),
+    prepare: () => ({title: 'Expertise / Skills'}),
   },
 })
