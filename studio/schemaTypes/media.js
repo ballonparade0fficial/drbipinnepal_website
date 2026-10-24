@@ -8,7 +8,7 @@ export const media = defineType({
   icon: PlayIcon,
   fieldsets: [
     {name: 'heading', title: 'Media section', options: {collapsible: false}},
-    {name: 'items', title: 'YouTube video entries', options: {collapsible: true}},
+    {name: 'videoEntries', title: 'YouTube video entries', options: {collapsible: true}},
   ],
   fields: [
     defineField({name: 'eyebrow', title: 'Small label above heading', type: 'string', fieldset: 'heading', initialValue: 'Watch & Learn'}),
@@ -19,7 +19,7 @@ export const media = defineType({
       name: 'videos',
       title: 'Videos',
       type: 'array',
-      fieldset: 'items',
+      fieldset: 'videoEntries',
       description: 'Add one YouTube URL and title per item. The first six appear on Home; all entries appear on the Media page.',
       of: [
         defineArrayMember({

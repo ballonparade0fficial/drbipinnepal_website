@@ -9,8 +9,8 @@ export const impact = defineType({
   icon: TrendUpwardIcon,
   fieldsets: [
     {name: 'heading', title: 'Section heading', options: {collapsible: false}},
-    {name: 'stats', title: 'Impact figures', options: {collapsible: true}},
-    {name: 'items', title: 'Impact areas', options: {collapsible: true}},
+    {name: 'impactFigures', title: 'Impact figures', options: {collapsible: true}},
+    {name: 'impactAreas', title: 'Impact areas', options: {collapsible: true}},
   ],
   fields: [
     defineField({
@@ -24,7 +24,7 @@ export const impact = defineType({
       name: 'stats',
       title: 'Headline figures',
       type: 'array',
-      fieldset: 'stats',
+      fieldset: 'impactFigures',
       description: 'The row of large numbers at the top of the section.',
       of: [
         defineArrayMember({
@@ -64,7 +64,7 @@ export const impact = defineType({
       name: 'items',
       title: 'Areas of impact',
       type: 'array',
-      fieldset: 'items',
+      fieldset: 'impactAreas',
       description: 'The list below the figures.',
       of: [
         defineArrayMember({

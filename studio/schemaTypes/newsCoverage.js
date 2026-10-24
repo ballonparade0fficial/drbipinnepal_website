@@ -8,7 +8,7 @@ export const newsCoverage = defineType({
   icon: DocumentTextIcon,
   fieldsets: [
     {name: 'heading', title: 'News section', options: {collapsible: false}},
-    {name: 'items', title: 'Press links', options: {collapsible: true}},
+    {name: 'pressLinks', title: 'Press links', options: {collapsible: true}},
   ],
   fields: [
     defineField({name: 'eyebrow', title: 'Small label above heading', type: 'string', fieldset: 'heading', initialValue: 'In the Press'}),
@@ -18,7 +18,7 @@ export const newsCoverage = defineType({
       name: 'items',
       title: 'Coverage links',
       type: 'array',
-      fieldset: 'items',
+      fieldset: 'pressLinks',
       description: 'Add one item for each interview, article, or press mention.',
       of: [
         defineArrayMember({

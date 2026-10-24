@@ -9,7 +9,7 @@ export const expertise = defineType({
   icon: BulbOutlineIcon,
   fieldsets: [
     {name: 'heading', title: 'Section heading', options: {collapsible: false}},
-    {name: 'groups', title: 'Skill groups and interactive pills', options: {collapsible: true}},
+    {name: 'skillGroups', title: 'Skill groups and interactive pills', options: {collapsible: true}},
   ],
   fields: [
     defineField({
@@ -30,7 +30,7 @@ export const expertise = defineType({
       name: 'groups',
       title: 'Skill groups',
       type: 'array',
-      fieldset: 'groups',
+      fieldset: 'skillGroups',
       description: 'Each group owns its own skills, so reordering one never affects another.',
       of: [
         defineArrayMember({

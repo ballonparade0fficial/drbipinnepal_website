@@ -8,7 +8,7 @@ export const publications = defineType({
   icon: DocumentTextIcon,
   fieldsets: [
     {name: 'heading', title: 'Publication section', options: {collapsible: false}},
-    {name: 'items', title: 'Publication entries', options: {collapsible: true}},
+    {name: 'publicationEntries', title: 'Publication entries', options: {collapsible: true}},
   ],
   fields: [
     defineField({name: 'eyebrow', title: 'Small label above heading', type: 'string', fieldset: 'heading', initialValue: 'Research & Writing'}),
@@ -19,7 +19,7 @@ export const publications = defineType({
       name: 'items',
       title: 'Publications',
       type: 'array',
-      fieldset: 'items',
+      fieldset: 'publicationEntries',
       description: 'Add one entry for each publication. The first six appear on Home; all entries appear on the Publications page.',
       of: [
         defineArrayMember({

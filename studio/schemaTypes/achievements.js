@@ -8,7 +8,7 @@ export const achievements = defineType({
   icon: StarIcon,
   fieldsets: [
     {name: 'heading', title: 'Section heading', options: {collapsible: false}},
-    {name: 'items', title: 'Career highlights', options: {collapsible: true}},
+    {name: 'careerHighlights', title: 'Career highlights', options: {collapsible: true}},
   ],
   fields: [
     defineField({
@@ -22,7 +22,7 @@ export const achievements = defineType({
       name: 'items',
       title: 'Achievements',
       type: 'array',
-      fieldset: 'items',
+      fieldset: 'careerHighlights',
       description: 'Numbered automatically on the site, in the order listed here — drag to reorder.',
       of: [
         defineArrayMember({
