@@ -244,6 +244,13 @@
           "Blood Banking",
           "Transfusion Safety"
         ],
+        "tagDetails": [
+          {"label": "Transfusion Medicine", "eyebrow": "Core specialty", "title": "Transfusion Medicine", "description": "Specialist practice focused on the safe, appropriate, and effective use of blood and blood components.", "details": "This includes clinical consultation, compatibility decisions, blood-component therapy, transfusion safety, and coordination between clinical and laboratory teams."},
+          {"label": "Tissue Typing", "eyebrow": "Core specialty", "title": "Tissue Typing", "description": "Laboratory assessment of tissue antigens to support compatibility and specialist clinical care.", "details": "Tissue typing connects immunohematology expertise with careful laboratory testing and interpretation for patients who require specialized matching."},
+          {"label": "Immunohematology", "eyebrow": "Core specialty", "title": "Immunohematology", "description": "The study and clinical application of blood-group antigens, antibodies, and immune interactions.", "details": "This expertise supports the investigation of complex blood-group findings, antibody identification, and safer transfusion decisions."},
+          {"label": "Blood Banking", "eyebrow": "Core specialty", "title": "Blood Banking", "description": "Management of donor, laboratory, inventory, and issue processes within a blood service.", "details": "Effective blood banking depends on reliable collection, testing, storage, traceability, quality systems, and timely support for clinical teams."},
+          {"label": "Transfusion Safety", "eyebrow": "Core specialty", "title": "Transfusion Safety", "description": "A patient-safety focus across the entire transfusion pathway.", "details": "The work includes appropriate requests, compatibility testing, bedside checks, reaction investigation, haemovigilance, and continuous quality improvement."}
+        ],
         "title": "Core Specialty"
       },
       {
@@ -254,6 +261,14 @@
           "Blood-Component Therapy",
           "Rare Blood Group Handling",
           "Transfusion Reaction Investigation"
+        ],
+        "tagDetails": [
+          {"label": "Compatibility Testing", "eyebrow": "Clinical & laboratory practice", "title": "Compatibility Testing", "description": "Laboratory testing that helps determine whether selected blood components are suitable for a patient.", "details": "Careful compatibility testing combines blood grouping, antibody screening, crossmatching, and clinical context to support safe transfusion."},
+          {"label": "ABO & Rh Discrepancies", "eyebrow": "Clinical & laboratory practice", "title": "ABO & Rh Discrepancies", "description": "Investigation of unexpected or conflicting ABO and Rh blood-group results.", "details": "Resolving discrepancies requires methodical laboratory review, repeat testing, clinical correlation, and clear communication before blood is issued."},
+          {"label": "Antibody Identification", "eyebrow": "Clinical & laboratory practice", "title": "Antibody Identification", "description": "Recognition and characterization of clinically significant red-cell antibodies.", "details": "Antibody identification helps guide compatible component selection and reduce the risk of delayed or acute haemolytic transfusion reactions."},
+          {"label": "Blood-Component Therapy", "eyebrow": "Clinical & laboratory practice", "title": "Blood-Component Therapy", "description": "Use of red cells, platelets, plasma, and other components according to the patient’s clinical need.", "details": "Component therapy supports targeted treatment while encouraging appropriate ordering, monitoring, and review of transfusion response."},
+          {"label": "Rare Blood Group Handling", "eyebrow": "Clinical & laboratory practice", "title": "Rare Blood Group Handling", "description": "Specialist support for patients and donors with uncommon blood-group findings.", "details": "This includes accurate identification, documentation, donor coordination, compatible-unit searches, and careful planning for future transfusion needs."},
+          {"label": "Transfusion Reaction Investigation", "eyebrow": "Clinical & laboratory practice", "title": "Transfusion Reaction Investigation", "description": "Structured assessment of suspected adverse events associated with transfusion.", "details": "Investigation combines clinical assessment, laboratory testing, documentation, and system review to protect the patient and prevent recurrence."}
         ],
         "title": "Clinical & Laboratory Practice"
       },
@@ -266,6 +281,14 @@
           "Traceability & Incident Review",
           "Staff Competency Assessment"
         ],
+        "tagDetails": [
+          {"label": "Transfusion Safety", "eyebrow": "Quality & safety", "title": "Transfusion Safety", "description": "Safety practices that reduce preventable risk before, during, and after transfusion.", "details": "This includes reliable procedures, staff communication, patient identification, compatibility checks, monitoring, and learning from incidents."},
+          {"label": "Haemovigilance", "eyebrow": "Quality & safety", "title": "Haemovigilance", "description": "Monitoring and learning from adverse events and near misses across the transfusion chain.", "details": "Haemovigilance turns reports into practical improvement by identifying patterns, strengthening systems, and helping teams prevent repeated errors."},
+          {"label": "Donor Infection Screening", "eyebrow": "Quality & safety", "title": "Donor Infection Screening", "description": "Screening processes that help protect recipients and maintain a safe blood supply.", "details": "The work connects donor selection, laboratory testing, result interpretation, and quality assurance to reduce transfusion-transmissible infection risk."},
+          {"label": "Quality Management", "eyebrow": "Quality & safety", "title": "Quality Management", "description": "Structured systems that keep blood-bank and laboratory services reliable and consistent.", "details": "Quality management includes standard procedures, documentation, audits, corrective action, equipment oversight, and continuous service improvement."},
+          {"label": "Traceability & Incident Review", "eyebrow": "Quality & safety", "title": "Traceability & Incident Review", "description": "Following each blood component and reviewing events that may affect patient safety.", "details": "Traceability and incident review help teams reconstruct what happened, identify contributing factors, and strengthen future controls."},
+          {"label": "Staff Competency Assessment", "eyebrow": "Quality & safety", "title": "Staff Competency Assessment", "description": "Supporting the knowledge and practical skills required for safe transfusion services.", "details": "Competency assessment provides a structured way to identify learning needs, reinforce procedures, and maintain confidence in specialist teams."}
+        ],
         "title": "Quality & Safety"
       },
       {
@@ -277,6 +300,14 @@
           "Equipment & Inventory Planning",
           "Clinical Governance"
         ],
+        "tagDetails": [
+          {"label": "Blood-Bank Management", "eyebrow": "Service & leadership", "title": "Blood-Bank Management", "description": "Coordinating people, processes, supplies, and quality systems within a blood-bank service.", "details": "Strong management connects donor services, laboratory operations, inventory, clinical communication, staffing, and patient-safety priorities."},
+          {"label": "Service Development", "eyebrow": "Service & leadership", "title": "Service Development", "description": "Building and improving transfusion services to meet changing clinical and community needs.", "details": "Service development involves identifying gaps, designing practical workflows, supporting teams, and measuring whether improvements are reaching patients."},
+          {"label": "Patient Blood Management", "eyebrow": "Service & leadership", "title": "Patient Blood Management", "description": "A multidisciplinary approach to optimize a patient’s blood and use transfusion appropriately.", "details": "Patient Blood Management brings anemia management, bleeding control, clinical planning, and evidence-based transfusion decisions together."},
+          {"label": "Education & Capacity Building", "eyebrow": "Service & leadership", "title": "Education & Capacity Building", "description": "Developing the knowledge, skills, and systems needed for dependable transfusion care.", "details": "Education and capacity building support sustainable services by sharing practical expertise, mentoring teams, and strengthening local capability."},
+          {"label": "Equipment & Inventory Planning", "eyebrow": "Service & leadership", "title": "Equipment & Inventory Planning", "description": "Planning the tools, supplies, and blood-component inventory required for reliable service delivery.", "details": "Good planning balances clinical demand, stock levels, equipment capacity, maintenance, wastage prevention, and emergency readiness."},
+          {"label": "Clinical Governance", "eyebrow": "Service & leadership", "title": "Clinical Governance", "description": "Accountability structures that support safe, effective, evidence-based clinical services.", "details": "Clinical governance brings quality improvement, risk management, professional standards, incident learning, and patient-centred decision-making together."}
+        ],
         "title": "Service & Leadership"
       },
       {
@@ -285,6 +316,12 @@
           "AABB Education Working Group",
           "International Collaboration",
           "Transfusion-Medicine Education"
+        ],
+        "tagDetails": [
+          {"label": "AATM Professional Leadership", "eyebrow": "Professional & international engagement", "title": "AATM Professional Leadership", "description": "Regional professional engagement through the Asian Association of Transfusion Medicine.", "details": "This supports collaboration, knowledge exchange, professional development, and shared learning across transfusion-medicine communities."},
+          {"label": "AABB Education Working Group", "eyebrow": "Professional & international engagement", "title": "AABB Education Working Group", "description": "Participation in an international forum focused on education and competency in transfusion services.", "details": "The work contributes to professional learning, practical education, and the exchange of approaches that can strengthen transfusion teams."},
+          {"label": "International Collaboration", "eyebrow": "Professional & international engagement", "title": "International Collaboration", "description": "Working with professional networks to share knowledge and strengthen transfusion practice.", "details": "International collaboration creates opportunities to compare systems, learn from different settings, and bring useful ideas into local service development."},
+          {"label": "Transfusion-Medicine Education", "eyebrow": "Professional & international engagement", "title": "Transfusion-Medicine Education", "description": "Sharing specialist knowledge with clinicians, laboratory professionals, and healthcare teams.", "details": "Education helps translate evidence into everyday practice and supports a stronger, safer, and more confident transfusion workforce."}
         ],
         "title": "Professional & International Engagement"
       }

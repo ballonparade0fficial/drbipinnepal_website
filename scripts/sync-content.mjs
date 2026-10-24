@@ -48,7 +48,7 @@ const QUERY = `{
   },
   "achievements": *[_id == "achievements"][0]{title, items[]{title, description}},
   "research": *[_id == "research"][0]{title, items[]{title, description, icon}},
-  "expertise": *[_id == "expertise"][0]{title, subtitle, groups[]{title, tags}},
+  "expertise": *[_id == "expertise"][0]{title, subtitle, groups[]{_key, title, tags, tagDetails[]{_key, label, eyebrow, title, description, details}}},
   "impact": *[_id == "impact"][0]{
     title,
     stats[]{value, suffix, label},

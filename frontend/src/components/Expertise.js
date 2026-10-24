@@ -25,7 +25,9 @@ function Expertise({ data }) {
 
         <div className="expertise-grid">
           {groups.map((group, groupIndex) => {
-            const items = group.tags || [];
+            const items = group.tagDetails?.length
+              ? group.tagDetails
+              : (group.tags || []).map((label) => ({label}));
             if (items.length === 0) return null;
             return (
               <motion.div
@@ -48,7 +50,7 @@ function Expertise({ data }) {
                 <div className="expertise-tags">
                   {items.map((tag, index) => (
                     <motion.div
-                      key={tag}
+                      key={tag._key || tag.label}
                       initial={{ opacity: 0 }}
                       animate={inView ? { opacity: 1 } : {}}
                       transition={{ duration: 0.3, delay: 0.05 * index }}
@@ -56,14 +58,17 @@ function Expertise({ data }) {
                       <InfoPill
                         pillClassName="tag-pill"
                         info={{
-                          eyebrow: group.title,
-                          title: tag,
-                          description: `${tag} is part of Dr. Bipin Nepal's ${group.title.toLowerCase()} expertise in Transfusion Medicine.`,
+                          eyebrow: tag.eyebrow || group.title,
+                          title: tag.title || tag.label,
+                          description:
+                            tag.description ||
+                            `${tag.label} is part of Dr. Bipin Nepal's ${group.title.toLowerCase()} expertise in Transfusion Medicine.`,
                           details:
-                            "Select this area to learn more about how it connects to his clinical practice, blood-service leadership, research, and professional education.",
+                            tag.details ||
+                            "Add editable details for this expertise area in the Expertise content data.",
                         }}
                       >
-                        {tag}
+                        {tag.label}
                       </InfoPill>
                     </motion.div>
                   ))}

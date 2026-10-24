@@ -79,7 +79,13 @@ const documents = [
     _type: 'expertise',
     title: content.expertise.title,
     subtitle: content.expertise.subtitle,
-    groups: withKeys(content.expertise.groups.map((g) => ({...g, tags: g.tags}))),
+    groups: withKeys(
+      content.expertise.groups.map((g) => ({
+        ...g,
+        tags: g.tags,
+        tagDetails: withKeys(g.tagDetails),
+      })),
+    ),
   },
   {
     _id: 'impact',
