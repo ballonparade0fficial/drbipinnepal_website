@@ -1,6 +1,5 @@
 {
   "site": {
-    "description": "A Transfusion Medicine specialist contributing to safer blood services, immunohematology, research, and healthcare leadership in Nepal.",
     "name": "Dr. Bipin Nepal",
     "tagline": "Transfusion Medicine Specialist | Clinical Leader | Researcher"
   },
@@ -92,7 +91,7 @@
     ],
     "badgeDetails": [
       {
-        "_key": "28abad0d",
+        "_key": "d38b9545",
         "description": "Leads the Department of Transfusion Medicine and Blood Bank at Grande International Hospital in Kathmandu.",
         "details": "This role brings together patient-focused consultation, laboratory coordination, transfusion safety, and the ongoing improvement of hospital blood-bank services.",
         "eyebrow": "Clinical leadership",
@@ -100,7 +99,7 @@
         "title": "Consultant & Department Head"
       },
       {
-        "_key": "e2f06924",
+        "_key": "44f3a656",
         "description": "Supports regional collaboration and professional exchange in transfusion medicine through the Asian Association of Transfusion Medicine.",
         "details": "The role connects practitioners and educators across the region to share experience, strengthen services, and advance transfusion-medicine practice.",
         "eyebrow": "Professional leadership",
@@ -108,7 +107,7 @@
         "title": "Joint Secretary, Asian Association of Transfusion Medicine"
       },
       {
-        "_key": "ae6d3b7d",
+        "_key": "9001ad64",
         "description": "Participates in an international working group focused on education, learning, and competency in transfusion services.",
         "details": "This work contributes to accessible professional learning and the exchange of practical knowledge across blood-bank and transfusion-medicine teams.",
         "eyebrow": "International education",
@@ -116,7 +115,7 @@
         "title": "AABB Global Transfusion Forum Education Working Group"
       },
       {
-        "_key": "0fc88ccc",
+        "_key": "9ad9ad41",
         "description": "A major clinical setting where Dr. Bipin Nepal has led transfusion-medicine and blood-bank services.",
         "details": "His responsibilities include clinical consultation, laboratory coordination, transfusion safety, and departmental service development.",
         "eyebrow": "Kathmandu · Nepal",
@@ -124,7 +123,7 @@
         "title": "Grande International Hospital"
       },
       {
-        "_key": "0de50eb9",
+        "_key": "284f3bf6",
         "description": "A medical-college setting where Dr. Bipin Nepal has contributed departmental leadership in blood-transfusion services.",
         "details": "The role combines specialist service delivery with the development of practical systems and learning opportunities for healthcare professionals.",
         "eyebrow": "Biratnagar · Nepal",
@@ -132,7 +131,7 @@
         "title": "Birat Medical College"
       },
       {
-        "_key": "011a456f",
+        "_key": "5ec8339b",
         "description": "A dedicated blood-transfusion organization in Kathmandu where Dr. Bipin Nepal has provided medical leadership.",
         "details": "The centre reflects his wider work in blood-service development, research, quality systems, and dependable transfusion support.",
         "eyebrow": "Blood-transfusion centre",
@@ -235,10 +234,10 @@
     "subtitle": "Specialized clinical, laboratory, quality, and leadership expertise across Transfusion Medicine",
     "groups": [
       {
-        "_key": "a954ca58",
+        "_key": "bbde6af2",
         "tagDetails": [
           {
-            "_key": "4f54d44b",
+            "_key": "88fc08e9",
             "description": "Specialist practice focused on the safe, appropriate, and effective use of blood and blood components.",
             "details": "This includes clinical consultation, compatibility decisions, blood-component therapy, transfusion safety, and coordination between clinical and laboratory teams.",
             "eyebrow": "Core specialty",
@@ -246,7 +245,7 @@
             "title": "Transfusion Medicine"
           },
           {
-            "_key": "7d02090b",
+            "_key": "44c68b2b",
             "description": "Laboratory assessment of tissue antigens to support compatibility and specialist clinical care.",
             "details": "Tissue typing connects immunohematology expertise with careful laboratory testing and interpretation for patients who require specialized matching.",
             "eyebrow": "Core specialty",
@@ -254,7 +253,7 @@
             "title": "Tissue Typing"
           },
           {
-            "_key": "3ee31e2f",
+            "_key": "c0961a1d",
             "description": "The study and clinical application of blood-group antigens, antibodies, and immune interactions.",
             "details": "This expertise supports the investigation of complex blood-group findings, antibody identification, and safer transfusion decisions.",
             "eyebrow": "Core specialty",
@@ -262,7 +261,7 @@
             "title": "Immunohematology"
           },
           {
-            "_key": "f0ac1e0e",
+            "_key": "7db0b297",
             "description": "Management of donor, laboratory, inventory, and issue processes within a blood service.",
             "details": "Effective blood banking depends on reliable collection, testing, storage, traceability, quality systems, and timely support for clinical teams.",
             "eyebrow": "Core specialty",
@@ -270,7 +269,7 @@
             "title": "Blood Banking"
           },
           {
-            "_key": "27191c5b",
+            "_key": "1316e177",
             "description": "A patient-safety focus across the entire transfusion pathway.",
             "details": "The work includes appropriate requests, compatibility testing, bedside checks, reaction investigation, haemovigilance, and continuous quality improvement.",
             "eyebrow": "Core specialty",
@@ -288,10 +287,10 @@
         "title": "Core Specialty"
       },
       {
-        "_key": "b539cb47",
+        "_key": "8d9aa9b3",
         "tagDetails": [
           {
-            "_key": "48da9491",
+            "_key": "976bea8d",
             "description": "Laboratory testing that helps determine whether selected blood components are suitable for a patient.",
             "details": "Careful compatibility testing combines blood grouping, antibody screening, crossmatching, and clinical context to support safe transfusion.",
             "eyebrow": "Clinical & laboratory practice",
@@ -299,7 +298,7 @@
             "title": "Compatibility Testing"
           },
           {
-            "_key": "da87349c",
+            "_key": "0ce5b3a5",
             "description": "Investigation of unexpected or conflicting ABO and Rh blood-group results.",
             "details": "Resolving discrepancies requires methodical laboratory review, repeat testing, clinical correlation, and clear communication before blood is issued.",
             "eyebrow": "Clinical & laboratory practice",
@@ -307,7 +306,7 @@
             "title": "ABO & Rh Discrepancies"
           },
           {
-            "_key": "69de93f0",
+            "_key": "16ee7d9f",
             "description": "Recognition and characterization of clinically significant red-cell antibodies.",
             "details": "Antibody identification helps guide compatible component selection and reduce the risk of delayed or acute haemolytic transfusion reactions.",
             "eyebrow": "Clinical & laboratory practice",
@@ -315,7 +314,7 @@
             "title": "Antibody Identification"
           },
           {
-            "_key": "659e45eb",
+            "_key": "436c54bc",
             "description": "Use of red cells, platelets, plasma, and other components according to the patient’s clinical need.",
             "details": "Component therapy supports targeted treatment while encouraging appropriate ordering, monitoring, and review of transfusion response.",
             "eyebrow": "Clinical & laboratory practice",
@@ -323,7 +322,7 @@
             "title": "Blood-Component Therapy"
           },
           {
-            "_key": "2d42e86c",
+            "_key": "4a60f878",
             "description": "Specialist support for patients and donors with uncommon blood-group findings.",
             "details": "This includes accurate identification, documentation, donor coordination, compatible-unit searches, and careful planning for future transfusion needs.",
             "eyebrow": "Clinical & laboratory practice",
@@ -331,7 +330,7 @@
             "title": "Rare Blood Group Handling"
           },
           {
-            "_key": "40922816",
+            "_key": "bf66ceb4",
             "description": "Structured assessment of suspected adverse events associated with transfusion.",
             "details": "Investigation combines clinical assessment, laboratory testing, documentation, and system review to protect the patient and prevent recurrence.",
             "eyebrow": "Clinical & laboratory practice",
@@ -350,10 +349,10 @@
         "title": "Clinical & Laboratory Practice"
       },
       {
-        "_key": "7be34f5d",
+        "_key": "875cbb1f",
         "tagDetails": [
           {
-            "_key": "7f13d305",
+            "_key": "e557eb38",
             "description": "Safety practices that reduce preventable risk before, during, and after transfusion.",
             "details": "This includes reliable procedures, staff communication, patient identification, compatibility checks, monitoring, and learning from incidents.",
             "eyebrow": "Quality & safety",
@@ -361,7 +360,7 @@
             "title": "Transfusion Safety"
           },
           {
-            "_key": "ad7eb4f3",
+            "_key": "1a5f0a49",
             "description": "Monitoring and learning from adverse events and near misses across the transfusion chain.",
             "details": "Haemovigilance turns reports into practical improvement by identifying patterns, strengthening systems, and helping teams prevent repeated errors.",
             "eyebrow": "Quality & safety",
@@ -369,7 +368,7 @@
             "title": "Haemovigilance"
           },
           {
-            "_key": "bbbad104",
+            "_key": "8896b906",
             "description": "Screening processes that help protect recipients and maintain a safe blood supply.",
             "details": "The work connects donor selection, laboratory testing, result interpretation, and quality assurance to reduce transfusion-transmissible infection risk.",
             "eyebrow": "Quality & safety",
@@ -377,7 +376,7 @@
             "title": "Donor Infection Screening"
           },
           {
-            "_key": "ce92f588",
+            "_key": "a1dbbe0a",
             "description": "Structured systems that keep blood-bank and laboratory services reliable and consistent.",
             "details": "Quality management includes standard procedures, documentation, audits, corrective action, equipment oversight, and continuous service improvement.",
             "eyebrow": "Quality & safety",
@@ -385,7 +384,7 @@
             "title": "Quality Management"
           },
           {
-            "_key": "8cd791b5",
+            "_key": "06c26f31",
             "description": "Following each blood component and reviewing events that may affect patient safety.",
             "details": "Traceability and incident review help teams reconstruct what happened, identify contributing factors, and strengthen future controls.",
             "eyebrow": "Quality & safety",
@@ -393,7 +392,7 @@
             "title": "Traceability & Incident Review"
           },
           {
-            "_key": "432de70e",
+            "_key": "da953d55",
             "description": "Supporting the knowledge and practical skills required for safe transfusion services.",
             "details": "Competency assessment provides a structured way to identify learning needs, reinforce procedures, and maintain confidence in specialist teams.",
             "eyebrow": "Quality & safety",
@@ -412,10 +411,10 @@
         "title": "Quality & Safety"
       },
       {
-        "_key": "b13d25b9",
+        "_key": "05f375a0",
         "tagDetails": [
           {
-            "_key": "36cbd6ab",
+            "_key": "1e204a2e",
             "description": "Coordinating people, processes, supplies, and quality systems within a blood-bank service.",
             "details": "Strong management connects donor services, laboratory operations, inventory, clinical communication, staffing, and patient-safety priorities.",
             "eyebrow": "Service & leadership",
@@ -423,7 +422,7 @@
             "title": "Blood-Bank Management"
           },
           {
-            "_key": "135b981c",
+            "_key": "32d1e0fb",
             "description": "Building and improving transfusion services to meet changing clinical and community needs.",
             "details": "Service development involves identifying gaps, designing practical workflows, supporting teams, and measuring whether improvements are reaching patients.",
             "eyebrow": "Service & leadership",
@@ -431,7 +430,7 @@
             "title": "Service Development"
           },
           {
-            "_key": "966290aa",
+            "_key": "aeecb8e9",
             "description": "A multidisciplinary approach to optimize a patient’s blood and use transfusion appropriately.",
             "details": "Patient Blood Management brings anemia management, bleeding control, clinical planning, and evidence-based transfusion decisions together.",
             "eyebrow": "Service & leadership",
@@ -439,7 +438,7 @@
             "title": "Patient Blood Management"
           },
           {
-            "_key": "2d56146a",
+            "_key": "b4c21ddd",
             "description": "Developing the knowledge, skills, and systems needed for dependable transfusion care.",
             "details": "Education and capacity building support sustainable services by sharing practical expertise, mentoring teams, and strengthening local capability.",
             "eyebrow": "Service & leadership",
@@ -447,7 +446,7 @@
             "title": "Education & Capacity Building"
           },
           {
-            "_key": "68f94fcc",
+            "_key": "e0bbca1e",
             "description": "Planning the tools, supplies, and blood-component inventory required for reliable service delivery.",
             "details": "Good planning balances clinical demand, stock levels, equipment capacity, maintenance, wastage prevention, and emergency readiness.",
             "eyebrow": "Service & leadership",
@@ -455,7 +454,7 @@
             "title": "Equipment & Inventory Planning"
           },
           {
-            "_key": "48ba6230",
+            "_key": "68534c85",
             "description": "Accountability structures that support safe, effective, evidence-based clinical services.",
             "details": "Clinical governance brings quality improvement, risk management, professional standards, incident learning, and patient-centred decision-making together.",
             "eyebrow": "Service & leadership",
@@ -474,10 +473,10 @@
         "title": "Service & Leadership"
       },
       {
-        "_key": "a542c24e",
+        "_key": "e5ca4093",
         "tagDetails": [
           {
-            "_key": "85a27fc6",
+            "_key": "c3509817",
             "description": "Regional professional engagement through the Asian Association of Transfusion Medicine.",
             "details": "This supports collaboration, knowledge exchange, professional development, and shared learning across transfusion-medicine communities.",
             "eyebrow": "Professional & international engagement",
@@ -485,7 +484,7 @@
             "title": "AATM Professional Leadership"
           },
           {
-            "_key": "bbc252ee",
+            "_key": "9c6a0516",
             "description": "Participation in an international forum focused on education and competency in transfusion services.",
             "details": "The work contributes to professional learning, practical education, and the exchange of approaches that can strengthen transfusion teams.",
             "eyebrow": "Professional & international engagement",
@@ -493,7 +492,7 @@
             "title": "AABB Education Working Group"
           },
           {
-            "_key": "d25b1fec",
+            "_key": "907e732a",
             "description": "Working with professional networks to share knowledge and strengthen transfusion practice.",
             "details": "International collaboration creates opportunities to compare systems, learn from different settings, and bring useful ideas into local service development.",
             "eyebrow": "Professional & international engagement",
@@ -501,7 +500,7 @@
             "title": "International Collaboration"
           },
           {
-            "_key": "f69ec84c",
+            "_key": "40a9a6a1",
             "description": "Sharing specialist knowledge with clinicians, laboratory professionals, and healthcare teams.",
             "details": "Education helps translate evidence into everyday practice and supports a stronger, safer, and more confident transfusion workforce.",
             "eyebrow": "Professional & international engagement",
@@ -586,157 +585,157 @@
     "showMoreLabel": "Show More Publications",
     "items": [
       {
-        "_key": "5fa65f3e",
+        "_key": "ad1f8f31",
         "title": "Experience of treating COVID-19 with Remdesivir and convalescent plasma in a resource-limited setting: a prospective, observational study",
         "url": "https://academic.oup.com/ofid/article/8/8/ofab391/6356052"
       },
       {
-        "_key": "5c845824",
+        "_key": "359e416b",
         "title": "Life style factors associated with the risk of type 2 diabetes mellitus",
         "url": "http://thegmj.co/index.php/1/article/view/20"
       },
       {
-        "_key": "77682e88",
+        "_key": "ea7a0c7b",
         "title": "ABO blood group discrepancies: Study of prevalence and related factors",
         "url": "http://thegmj.co/index.php/1/article/view/22/21"
       },
       {
-        "_key": "66a6d1de",
+        "_key": "b56977bd",
         "title": "Combination of convalescent plasma therapy and repurposed drugs to treat severe COVID-19 patient with multimorbidity",
         "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/ccr3.3964"
       },
       {
-        "_key": "e2d62eff",
+        "_key": "9eb2d04c",
         "title": "Knowledge, Attitude and Practice about voluntary blood donation among young student population of Karachi",
         "url": "https://www.researchgate.net/publication/351747610_Final_Project_Dr_Bipin_1"
       },
       {
-        "_key": "6e56b5ea",
+        "_key": "d888746a",
         "title": "Prevalence of ABO and Rh blood groups among individuals attending a tertiary care hospital in Nepal: a retrospective cross-sectional study",
         "url": "https://bmjopen.bmj.com/content/16/3/e114395.abstract"
       },
       {
-        "_key": "056c81b0",
+        "_key": "319678fe",
         "title": "Blood transfusion services in Nepal: An overview",
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13290234/"
       },
       {
-        "_key": "52dd45d4",
+        "_key": "19939b62",
         "title": "Patient blood management for cardiovascular surgery: Clinical practice consensus statement",
         "url": "https://www.academia.edu/110424371/Patient_blood_management_for_cardiovascular_surgery_Clinical_practice_consensus_statement"
       },
       {
-        "_key": "a349ae17",
+        "_key": "4458b9dd",
         "title": "Steps taken to alleviate under-reporting of transfusion reactions at a public sector hospital in Pakistan",
         "url": "https://synapse.koreamed.org/articles/1092304"
       },
       {
-        "_key": "0b1b89ef",
+        "_key": "aa5c6f6f",
         "title": "Non-communicable disease pattern in adults seeking preventive general health checkup",
         "url": "https://www.researchgate.net/publication/330547261_Non-communicable_disease_pattern_in_adults_seeking_preventive_general_health_checkup"
       },
       {
-        "_key": "70537609",
+        "_key": "d48a7be2",
         "title": "Acquired B antigen in ABO blood group system: Non-secretor group A1 subtype, Rh positive with auto antibodies in a patient with urinary tract infection with E. coli",
         "url": "https://www.researchgate.net/publication/330548070_Acquired_B_antigen_in_ABO_blood_group_system_Non-secretor_group_A1_subtype_Rh_positive_with_auto_antibodies_in_a_patient_with_urinary_tract_infection_with_E_coli"
       },
       {
-        "_key": "5858b4bf",
+        "_key": "90ead393",
         "title": "The Spice Route's perspective on family medicine via the social media project #1WordforFamilyMedicine",
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5749051/"
       },
       {
-        "_key": "3d5c0619",
+        "_key": "087b595e",
         "title": "Modified Shanfield Ureteric Reimplantation with or Without Ureteric Tailoring in Primary Obstructive Megaureter",
         "url": "https://www.researchgate.net/publication/411187713_Modified_Shanfield_Ureteric_Reimplantation_with_or_Without_Ureteric_Tailoring_in_Primary_Obstructive_Megaureter"
       },
       {
-        "_key": "0b5085ac",
+        "_key": "fb9146c3",
         "title": "Blood Bank Challenges of COVID-19 Pandemic at Blood Transfusion Service at Tertiary Care Hospital: Grande International Hospital",
         "url": "https://www.researchgate.net/publication/414605012_Blood_Bank_Challenges_of_COVID-19_Pandemic_At_Blood_Transfusion_Service_At_Tertiary_Care_Hospital_Grande_International_Hospital"
       },
       {
-        "_key": "c0d37fe2",
+        "_key": "c34de3c1",
         "title": "Cardiac Society of Nepal Consensus Recommendations for INR Monitoring and Warfarin Management",
         "url": "https://www.researchgate.net/profile/Chandra-Adhikari/publication/405464388_Cardiac_Society_of_Nepal_Consensus_Recommendations_for_INR_Monitoring_and_Warfarin_Management/links/6a1a6705842cec72a3f5296e/Cardiac-Society-of-Nepal-Consensus-Recommendations-for-INR-Monitoring-and-Warfarin-Management.pdf"
       },
       {
-        "_key": "f54e8039",
+        "_key": "485f52ea",
         "title": "The Effect of Metformin on Coagulation Profiles in Type II Diabetes Mellitus: A Tertiary Care Hospital of Nepal",
         "url": "https://www.researchgate.net/publication/398954956_The_Effect_of_Metformin_on_Coagulation_Profiles_in_Type_II_Diabetes_Mellitus_A_Tertiary_Care_Hospital_of_Nepal"
       },
       {
-        "_key": "2f573aee",
+        "_key": "f2ffeee1",
         "title": "Clinically Significant Anti-E and Anti-Jka Alloantibodies Identified in a 24-year-old Female suspected of Delayed Hemolytic Anemia Requiring Emergency Transfusion",
         "url": "https://www.researchgate.net/publication/398957232_Clinically_Significant_Anti-E_and_Anti-Jka_Alloantibodies_Identified_in_a_24-year-old_Female_suspected_of_Delayed_Hemolytic_Anemia_Requiring_Emergency_Transfusion"
       },
       {
-        "_key": "0e3b0ed3",
+        "_key": "4797e969",
         "title": "Left ventricular dysfunction in patients with chronic obstructive pulmonary disease (COPD)",
         "url": "https://www.researchgate.net/publication/393876782_Left_ventricular_dysfunction_in_patients_with_chronic_obstructive_pulmonary_disease_COPD"
       },
       {
-        "_key": "508dbf80",
+        "_key": "5f3e94ca",
         "title": "Pattern of Blood Components Utilization in Grande International Hospital: A Tertiary Care Hospital of Nepal",
         "url": "https://www.researchgate.net/publication/393878633_Pattern_of_Blood_Components_Utilization_in_Grande_International_Hospital_A_Tertiary_Care_Hospital_of_Nepal"
       },
       {
-        "_key": "b03d8bc4",
+        "_key": "bb24cd3e",
         "title": "Seroprevalence of transfusion transmissible infections among blood donors at a tertiary care hospital in urban area of Nepal",
         "url": "https://www.researchgate.net/publication/390628743_Seroprevalence_of_transfusion_transmissible_infections_among_blood_donors_at_a_tertiary_care_hospital_in_urban_area_of_Nepal"
       },
       {
-        "_key": "d18d9864",
+        "_key": "39a35e63",
         "title": "Treatment of COVID-19 in Hospitalized Patients with Remdesivir, Convalescent Plasma or Both in a Resource Limited Setting: A Prospective Study",
         "url": "https://www.researchgate.net/publication/349931606_Treatment_of_COVID-19_in_Hospitalized_Patients_with_Remdesivir_Convalescent_Plasma_or_Both_in_a_Resource_Limited_Setting_A_Prospective_Study"
       },
       {
-        "_key": "63b2d894",
+        "_key": "13e110cb",
         "title": "Challenges faced by the laboratory professionals during COVID-19 pandemic at tertiary care hospital, Kathmandu, Nepal",
         "url": "https://www.researchgate.net/publication/360190591_Challenges_faced_by_the_laboratory_professionals_during_COVID-19_pandemic_at_tertiary_care_hospital_Kathmandu_Nepal"
       },
       {
-        "_key": "2cb5ef1b",
+        "_key": "14fdea31",
         "title": "Knowledge, Attitude and Practice Regarding the Voluntary Blood Donation Among the Young Student Population of Karachi",
         "url": "https://www.researchgate.net/publication/354372273_Knowledge_Attitude_and_Practice_Regarding_the_Voluntary_Blood_Donation_Among_the_Young_Student_Population_of_Karachi"
       },
       {
-        "_key": "0d6a63df",
+        "_key": "38411963",
         "title": "Viral Inactivation and Enrichment of Factor VIII, Factor XIII, Fibrinogen and Von Willebrand Factor from Fresh Frozen Plasma",
         "url": "https://www.researchgate.net/publication/354372440_Viral_Inactivation_and_Enrichment_of_Factor_VIII_Factor_XIII_Fibrinogen_and_Von_Willebrand_Factor_VWF_Multimers_from_Fresh_Frozen_Plasma_FFPUsing_VIPS_Plasma_Virus_Inactivation_Treatment_System"
       },
       {
-        "_key": "4a10cbfa",
+        "_key": "57ea169c",
         "title": "Haemovigilance reports of Adverse Blood Donor Reaction among Voluntary Blood Donors in a Tertiary care hospital in Kathmandu, Nepal",
         "url": "https://www.researchgate.net/publication/354090764_Haemovigilance_reports_of_Adverse_Blood_Donor_Reaction_among_Voluntary_Blood_Donors_in_a_Tertiary_care_hospital_in_Kathmandu_Nepal_Bipin_Nepal"
       },
       {
-        "_key": "fbbb31d5",
+        "_key": "d773ed0a",
         "title": "CYTOPENIAS IN VARIOUS COMBINATIONS FOUND IN COMPLETE BLOOD COUNTS (CBC) PERFORMED IN DOW DIAGNOSTIC RESEARCH & REFERRAL LABORATORY",
         "url": "https://www.researchgate.net/publication/351747589_Cytopenias_in_Various_Combinations_Found_in_Routine_Complete_Blood_Counts"
       },
       {
-        "_key": "342166e5",
+        "_key": "5ff6e35c",
         "title": "Non-Secretor A Subgroup with Acquired B Antigen, Naturally and Acquired Immune Anti-A1 Antibodies in a Patient with Carcinoma of Esophagus",
         "url": "http://publication.pumhs.edu.pk/index.php/ojs/article/view/182"
       },
       {
-        "_key": "78c31869",
+        "_key": "8bc49b24",
         "title": "Cytopenias in Various Combinations Found in Routine Complete Blood Counts",
         "url": "http://publication.pumhs.edu.pk/index.php/ojs/article/view/137"
       },
       {
-        "_key": "ebeecfce",
+        "_key": "58273ca8",
         "title": "Anti-c Alloimmunization Associated with Acute Hemolytic Transfusion Reaction in a Chronically Transfused Beta-Thalassemia Patient: A Case Report",
         "url": "https://www.researchgate.net/publication/414613260_Anti-c_Alloimmunization_Associated_with_Acute_Hemolytic_Transfusion_Reaction_in_a_Chronically_Transfused_b-Thalassemia_Patient_A_Case_Report"
       },
       {
-        "_key": "9274320e",
+        "_key": "8ff58d3a",
         "title": "Prevalence of ABO and Rh blood groups among individuals attending a tertiary care hospital in Nepal: a retrospective cross-sectional study",
         "url": "https://www.researchgate.net/publication/401766559_Prevalence_of_ABO_and_Rh_blood_groups_among_individuals_attending_a_tertiary_care_hospital_in_Nepal_a_retrospective_cross-sectional_study"
       },
       {
-        "_key": "d6696d30",
+        "_key": "a4d29bff",
         "title": "An Innovative Technique for Smart Repair of Induction Motors",
         "url": "https://nce.edu.np/wp-content/uploads/2025/07/An-innovative.pdf"
       }
@@ -748,175 +747,175 @@
     "intro": "Selected interviews, features, and media coverage about Dr. Bipin Nepal's work.",
     "items": [
       {
-        "_key": "fea1db1a",
+        "_key": "0b2910fd",
         "source": "Himal Khabar",
         "title": "COVID-19 plasma therapy and transfusion-medicine coverage",
         "url": "https://www.himalkhabar.com/news/117307"
       },
       {
-        "_key": "b8b03d4b",
+        "_key": "a8347839",
         "source": "Himal Khabar",
         "title": "News coverage featuring Dr. Bipin Nepal",
         "url": "https://www.himalkhabar.com/news/117457"
       },
       {
-        "_key": "7b7cd8c2",
+        "_key": "6af503ba",
         "source": "The Himalayan Times",
         "title": "Doctors advocate plasma therapy for critically ill COVID patients",
         "url": "https://thehimalayantimes.com/nepal/docs-advocate-plasma-therapy-for-critically-ill-covid-patients/"
       },
       {
-        "_key": "f4c5de9d",
+        "_key": "599f81b0",
         "source": "BBC Nepali",
         "title": "COVID-19 and plasma therapy coverage",
         "url": "https://www.bbc.com/nepali/news-53862392"
       },
       {
-        "_key": "5b677b6a",
+        "_key": "d7003818",
         "source": "CFM On Air",
         "title": "Interview and discussion on plasma therapy",
         "url": "https://www.cfmonair.com/podcast/2206"
       },
       {
-        "_key": "53188a64",
+        "_key": "1170e40e",
         "source": "Shilapatra",
         "title": "COVID-19 plasma therapy coverage",
         "url": "https://shilapatra.com/detail/37065"
       },
       {
-        "_key": "85fc567a",
+        "_key": "db14ca72",
         "source": "Desh Sanchar",
         "title": "Plasma donation and COVID-19 response",
         "url": "https://deshsanchar.com/2020/08/05/393767/#.XyudJN0P_I0.facebook"
       },
       {
-        "_key": "f036f749",
+        "_key": "b71aae27",
         "source": "Lokaantar",
         "title": "Plasma therapy coverage during the COVID-19 response",
         "url": "https://lokaantar.com/story/114688/2020/8/4/plasma-therapy/"
       },
       {
-        "_key": "8425e0c1",
+        "_key": "1d95594b",
         "source": "Desh Sanchar",
         "title": "COVID-19 plasma therapy and blood services",
         "url": "https://deshsanchar.com/2020/08/09/395458/"
       },
       {
-        "_key": "05f1f5c6",
+        "_key": "e7036c98",
         "source": "Swasthya Khabar",
         "title": "Plasma therapy and transfusion-medicine perspective",
         "url": "https://swasthyakhabar.com/story/33969#.Xyb5kctpVag.twitter"
       },
       {
-        "_key": "41e15442",
+        "_key": "7701b5a4",
         "source": "Health Aawaj",
         "title": "Profile coverage of Dr. Bipin Nepal",
         "url": "https://www.healthaawaj.com/profilee/25511/"
       },
       {
-        "_key": "4b6089eb",
+        "_key": "91f9ffe0",
         "source": "Onlinekhabar",
         "title": "COVID-19 treatment and plasma therapy",
         "url": "https://www.onlinekhabar.com/2020/10/905888"
       },
       {
-        "_key": "c60e2ee0",
+        "_key": "6511c7f5",
         "source": "Nayapatrika Daily",
         "title": "Blood services and COVID-19 response",
         "url": "https://nayapatrikadaily.com/news/63694/news-63694/"
       },
       {
-        "_key": "a347bf39",
+        "_key": "b22d5049",
         "source": "Medical Patra",
         "title": "Medical and transfusion-medicine news coverage",
         "url": "https://medicalpatra.com/news-details/2056/2021-03-07"
       },
       {
-        "_key": "77c4a34a",
+        "_key": "b1a67e63",
         "source": "Health News Nepal",
         "title": "Medical dictionary project and Medical Shabdasagar",
         "url": "https://healthnewsnepal.com/news/medical-dictionary/"
       },
       {
-        "_key": "f26c4933",
+        "_key": "bffa749f",
         "source": "EduPatra",
         "title": "Medical Shabdasagar launched after years of work",
         "url": "https://edupatra.com/news/medical-shabdasagar-launched-in-eight-years/"
       },
       {
-        "_key": "8d284b5c",
+        "_key": "0fcb7a58",
         "source": "Image Khabar",
         "title": "News archive featuring Dr. Bipin Nepal",
         "url": "https://www.imagekhabar.com/news/tag/%E0%A4%A1%E0%A4%BE-%E0%A4%B5%E0%A4%BF%E0%A4%AA%E0%A4%BF%E0%A4%A8-%E0%A4%A8%E0%A5%87%E0%A4%AA%E0%A4%BE%E0%A4%B2/"
       },
       {
-        "_key": "41ab8914",
+        "_key": "8b74885d",
         "source": "Radio Chimeshwor",
         "title": "Blood donation and plasma therapy coverage",
         "url": "https://www.radiochimteshwor.com.np/news-details/2254/2020-09-12"
       },
       {
-        "_key": "6751e865",
+        "_key": "4c5d03f8",
         "source": "Farakdhar",
         "title": "COVID-19 response and plasma therapy",
         "url": "https://farakdhar.com/story/49807/"
       },
       {
-        "_key": "3b13bf16",
+        "_key": "00e1b6bd",
         "source": "Kantipur Health",
         "title": "Transfusion medicine and COVID-19 coverage",
         "url": "https://www.kantipurhealth.com/archives/5727"
       },
       {
-        "_key": "4faf895e",
+        "_key": "c3bb8394",
         "source": "Health Aawaj",
         "title": "Interview on transfusion medicine and public health",
         "url": "https://www.healthaawaj.com/interview/40877/"
       },
       {
-        "_key": "dbb3094a",
+        "_key": "a43b74cc",
         "source": "Lokpath",
         "title": "Health and COVID-19 news coverage",
         "url": "https://www.lokpath.com/story/414298/"
       },
       {
-        "_key": "42fa434b",
+        "_key": "8741d7e3",
         "source": "Sadhana",
         "title": "COVID-19 plasma therapy and blood donation",
         "url": "https://sadhana.newsofnepal.com/2021/05/29/2861/"
       },
       {
-        "_key": "77c71526",
+        "_key": "fdbbb430",
         "source": "Ratopati",
         "title": "COVID-19 treatment and plasma therapy coverage",
         "url": "https://www.ratopati.com/story/177210/corona-virus-"
       },
       {
-        "_key": "f1ee1f64",
+        "_key": "5dacf6ff",
         "source": "Swasthya Khabar",
         "title": "Transfusion services during the pandemic",
         "url": "https://swasthyakhabar.com/story/36518"
       },
       {
-        "_key": "7e68a995",
+        "_key": "2bf34936",
         "source": "Image Khabar",
         "title": "COVID-19 and plasma therapy news coverage",
         "url": "https://www.imagekhabar.com/news/173166/"
       },
       {
-        "_key": "e225bcf2",
+        "_key": "b8736c20",
         "source": "Swasthya Khabar",
         "title": "Blood donation and transfusion-medicine coverage",
         "url": "https://swasthyakhabar.com/story/34995"
       },
       {
-        "_key": "be9df510",
+        "_key": "6184f48f",
         "source": "Desh Sanchar",
         "title": "COVID-19 plasma therapy and blood services",
         "url": "https://deshsanchar.com/2020/08/09/405142/"
       },
       {
-        "_key": "9c693897",
+        "_key": "ac986e23",
         "source": "Aarthik News",
         "title": "Health-sector coverage featuring Dr. Bipin Nepal",
         "url": "https://aarthiknews.com/news/24033/"
@@ -930,87 +929,87 @@
     "showMoreLabel": "Show More Videos",
     "videos": [
       {
-        "_key": "dcfb58e5",
+        "_key": "25f33f26",
         "title": "Dr. Bipin Nepal — Featured Video",
         "url": "https://youtu.be/ecD8Z2SkxTo"
       },
       {
-        "_key": "3f1892f6",
+        "_key": "dc2068e9",
         "title": "Dr. Bipin Nepal — Featured Video",
         "url": "https://youtu.be/2ey79XnfrVY"
       },
       {
-        "_key": "bba5b277",
+        "_key": "f9850665",
         "title": "Dr. Bipin Nepal — Featured Video",
         "url": "https://youtu.be/G9fOmq_QkJQ"
       },
       {
-        "_key": "765c45db",
+        "_key": "0a05f0f7",
         "title": "Dr. Bipin Nepal — Featured Video",
         "url": "https://youtu.be/IL_hHkaRhJ0"
       },
       {
-        "_key": "035cbbaf",
+        "_key": "78ec1bec",
         "title": "Dr. Bipin Nepal — Featured Video",
         "url": "https://youtu.be/HhCxEprGl7A"
       },
       {
-        "_key": "777a7618",
+        "_key": "8112ffd7",
         "title": "Dr. Bipin Nepal — Featured Video",
         "url": "https://youtu.be/4WDk0Bo-Xw8"
       },
       {
-        "_key": "b5e41a0c",
+        "_key": "ce5e7a62",
         "title": "Dr. Bipin Nepal — Featured Video",
         "url": "https://youtu.be/G0uunXlOBbs"
       },
       {
-        "_key": "4450210c",
+        "_key": "572cb097",
         "title": "Dr. Bipin Nepal — Featured Video",
         "url": "https://youtu.be/7m3LyZ6rZ4Y"
       },
       {
-        "_key": "f495da98",
+        "_key": "55cac9b8",
         "title": "Dr. Bipin Nepal — Featured Video",
         "url": "https://youtu.be/QgrOGBxV4UU"
       },
       {
-        "_key": "70104476",
+        "_key": "bca3db30",
         "title": "Dr. Bipin Nepal — Featured Video",
         "url": "https://youtu.be/dufFsXk3mcY"
       },
       {
-        "_key": "e2670f8e",
+        "_key": "bbacc467",
         "title": "Dr. Bipin Nepal — Featured Video",
         "url": "https://youtu.be/ia3I82seHXI"
       },
       {
-        "_key": "6959b3e7",
+        "_key": "8266f544",
         "title": "Dr. Bipin Nepal — Featured Video",
         "url": "https://youtu.be/5FrWp_pxjoQ"
       },
       {
-        "_key": "93481d6b",
+        "_key": "b409d1ff",
         "title": "Dr. Bipin Nepal — Featured Video",
         "url": "https://youtu.be/60HXpH6RztU"
       },
       {
-        "_key": "925c41bd",
+        "_key": "735be39a",
         "title": "Dr. Bipin Nepal — Featured Video",
         "url": "https://youtu.be/Xh_-nZILZI8"
       },
       {
-        "_key": "161137e4",
+        "_key": "ce7c805f",
         "title": "Dr. Bipin Nepal — Featured Video",
         "url": "https://youtu.be/fMS4O9W-7LE"
       },
       {
-        "_key": "dcd28daf",
+        "_key": "b10565a5",
         "title": "Dr. Bipin Nepal — Featured Video",
         "url": "https://youtu.be/MZvr3Arh5cE"
       },
       {
-        "_key": "f005b3e3",
+        "_key": "b058113f",
         "title": "Dr. Bipin Nepal — Featured Video",
         "url": "https://youtu.be/DZPQ0eEMFbM"
       }
