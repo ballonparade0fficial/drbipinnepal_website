@@ -58,6 +58,7 @@ const documents = [
     title: content.about.title,
     text: content.about.text,
     badges: content.about.badges,
+    badgeDetails: withKeys(content.about.badgeDetails),
     affiliationsLabel: content.about.affiliationsLabel,
     affiliations: withKeys(content.about.affiliations),
   },

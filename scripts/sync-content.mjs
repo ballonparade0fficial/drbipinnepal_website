@@ -43,7 +43,7 @@ const QUERY = `{
     stats[]{label, value, suffix}
   },
   "about": *[_id == "about"][0]{
-    title, text, badges, affiliationsLabel,
+    title, text, badges, badgeDetails[]{_key, label, eyebrow, title, description, details}, affiliationsLabel,
     affiliations[]{acronym, name, url}
   },
   "achievements": *[_id == "achievements"][0]{title, items[]{title, description}},
@@ -133,6 +133,7 @@ function shape(data, imagePath) {
       title: data.about?.title,
       text: data.about?.text,
       badges: data.about?.badges ?? [],
+      badgeDetails: data.about?.badgeDetails ?? [],
       affiliationsLabel: data.about?.affiliationsLabel,
       affiliations: data.about?.affiliations ?? [],
     },

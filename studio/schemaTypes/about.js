@@ -1,5 +1,6 @@
 import {defineType, defineField, defineArrayMember} from 'sanity'
 import {UserIcon} from '@sanity/icons/User'
+import {TagIcon} from '@sanity/icons/Tag'
 
 export const about = defineType({
   name: 'about',
@@ -27,6 +28,46 @@ export const about = defineType({
       type: 'array',
       description: 'Short qualification pills, e.g. "MBBS • Dow University".',
       of: [defineArrayMember({type: 'string'})],
+    }),
+    defineField({
+      name: 'badgeDetails',
+      title: 'Credential details',
+      type: 'array',
+      description: 'The label and extra information shown when a credential pill is clicked.',
+      of: [
+        defineArrayMember({
+          type: 'object',
+          name: 'badgeDetail',
+          icon: TagIcon,
+          fields: [
+            defineField({
+              name: 'label',
+              title: 'Pill label',
+              type: 'string',
+              validation: (rule) => rule.required(),
+            }),
+            defineField({name: 'eyebrow', title: 'Small category label', type: 'string'}),
+            defineField({name: 'title', title: 'Dialog title', type: 'string'}),
+            defineField({
+              name: 'description',
+              title: 'Short description',
+              type: 'text',
+              rows: 3,
+              validation: (rule) => rule.required(),
+            }),
+            defineField({
+              name: 'details',
+              title: 'Dialog details',
+              type: 'text',
+              rows: 5,
+              validation: (rule) => rule.required(),
+            }),
+          ],
+          preview: {
+            select: {title: 'label', subtitle: 'eyebrow'},
+          },
+        }),
+      ],
     }),
     defineField({
       name: 'affiliationsLabel',
