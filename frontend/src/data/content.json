@@ -196,35 +196,51 @@
     "title": "Research Areas",
     "items": [
       {
+        "_key": "e3c92dd6",
         "description": "Studying donor screening and the prevalence of transfusion-transmissible infections, including the implications for blood safety in defined donor populations.",
+        "details": "This area examines donor selection, screening practices, and patterns of transfusion-transmissible infections so that blood services can identify risks and strengthen the safety of the national blood supply.",
         "title": "Transfusion-Transmissible Infection Screening"
       },
       {
+        "_key": "fedf92df",
         "description": "Investigating discordant grouping results, unusual blood-group findings, acquired antigen changes, and practical immunohematology challenges.",
+        "details": "The work focuses on resolving complex ABO and immunohematology findings through careful laboratory investigation, accurate interpretation, and improved compatibility decisions.",
         "title": "ABO Discrepancies & Immunohematology"
       },
       {
+        "_key": "622d89dd",
         "description": "Understanding red-cell antibodies, alloimmunization, and suspected transfusion reactions to improve compatibility decisions and patient safety.",
+        "details": "This research supports earlier recognition of clinically significant antibodies, better investigation of adverse reactions, and safer transfusion support for patients who need repeated or complex transfusions.",
         "title": "Alloimmunization & Transfusion Reactions"
       },
       {
+        "_key": "704fb1bf",
         "description": "Examining how blood products are ordered, issued, and used, including the relationship between components requested and transfused.",
+        "details": "The goal is to understand utilization patterns and identify practical opportunities to reduce avoidable wastage while ensuring that the right blood component reaches the right patient at the right time.",
         "title": "Blood-Component Utilization"
       },
       {
+        "_key": "dcd4f02e",
         "description": "Applying multidisciplinary, evidence-based approaches to optimize the patient's own blood, manage bleeding, and use transfusion appropriately in clinical care.",
+        "details": "Patient Blood Management brings clinicians, laboratory teams, and transfusion services together to prevent unnecessary transfusion, address anemia, manage bleeding, and improve patient-centred outcomes.",
         "title": "Patient Blood Management"
       },
       {
+        "_key": "d6ac260f",
         "description": "Strengthening the reporting and analysis of adverse events and near misses as part of safer, more reliable transfusion practice.",
+        "details": "Haemovigilance follows the transfusion pathway from donation through patient monitoring, using incident reporting and review to identify system improvements and prevent recurrence.",
         "title": "Haemovigilance & Transfusion Safety"
       },
       {
+        "_key": "674de728",
         "description": "Examining the organization of transfusion services, quality systems, specialist training, traceability, and service development in Nepal.",
+        "details": "This area considers how blood services can build dependable processes, maintain traceability, develop staff capability, and improve access to quality transfusion care across different healthcare settings.",
         "title": "Blood-Service Systems & Quality Improvement"
       },
       {
+        "_key": "79ca1a28",
         "description": "Contributing to research and clinical learning from COVID-19 treatment and emergency transfusion care in resource-limited settings.",
+        "details": "The work captures practical lessons from emergency transfusion support and COVID-19 care, with attention to clinical decision-making, plasma therapy, resource limitations, and patient safety.",
         "title": "COVID-19 & Emergency Transfusion Services"
       }
     ]
@@ -566,6 +582,10 @@
       {
         "description": "Contributes to professional education, capacity building, and collaboration through regional and international transfusion-medicine networks.",
         "title": "Education and International Collaboration"
+      },
+      {
+        "description": "Test",
+        "title": "Test"
       }
     ]
   },
