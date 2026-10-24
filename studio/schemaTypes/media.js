@@ -6,20 +6,15 @@ export const media = defineType({
   title: 'Media / YouTube Videos',
   type: 'document',
   icon: PlayIcon,
-  fieldsets: [
-    {name: 'heading', title: 'Media section', options: {collapsible: false}},
-    {name: 'videoEntries', title: 'YouTube video entries', options: {collapsible: true}},
-  ],
   fields: [
-    defineField({name: 'eyebrow', title: 'Small label above heading', type: 'string', fieldset: 'heading', initialValue: 'Watch & Learn'}),
-    defineField({name: 'title', title: 'Media section heading', type: 'string', fieldset: 'heading', validation: (rule) => rule.required()}),
-    defineField({name: 'intro', title: 'Introductory text', type: 'text', rows: 3, fieldset: 'heading'}),
-    defineField({name: 'showMoreLabel', title: 'Home-page button label', type: 'string', fieldset: 'heading', initialValue: 'Show More Videos'}),
+    defineField({name: 'eyebrow', title: 'Small label above heading', type: 'string', initialValue: 'Watch & Learn'}),
+    defineField({name: 'title', title: 'Media section heading', type: 'string', validation: (rule) => rule.required()}),
+    defineField({name: 'intro', title: 'Introductory text', type: 'text', rows: 3}),
+    defineField({name: 'showMoreLabel', title: 'Home-page button label', type: 'string', initialValue: 'Show More Videos'}),
     defineField({
       name: 'videos',
       title: 'Videos',
       type: 'array',
-      fieldset: 'videoEntries',
       description: 'Add one YouTube URL and title per item. The first six appear on Home; all entries appear on the Media page.',
       of: [
         defineArrayMember({

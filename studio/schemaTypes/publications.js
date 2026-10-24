@@ -6,20 +6,15 @@ export const publications = defineType({
   title: 'Publications / Research & Writing',
   type: 'document',
   icon: DocumentTextIcon,
-  fieldsets: [
-    {name: 'heading', title: 'Publication section', options: {collapsible: false}},
-    {name: 'publicationEntries', title: 'Publication entries', options: {collapsible: true}},
-  ],
   fields: [
-    defineField({name: 'eyebrow', title: 'Small label above heading', type: 'string', fieldset: 'heading', initialValue: 'Research & Writing'}),
-    defineField({name: 'title', title: 'Publication section heading', type: 'string', fieldset: 'heading', validation: (rule) => rule.required()}),
-    defineField({name: 'intro', title: 'Introductory text', type: 'text', rows: 3, fieldset: 'heading'}),
-    defineField({name: 'showMoreLabel', title: 'Home-page button label', type: 'string', fieldset: 'heading', initialValue: 'Show More Publications'}),
+    defineField({name: 'eyebrow', title: 'Small label above heading', type: 'string', initialValue: 'Research & Writing'}),
+    defineField({name: 'title', title: 'Publication section heading', type: 'string', validation: (rule) => rule.required()}),
+    defineField({name: 'intro', title: 'Introductory text', type: 'text', rows: 3}),
+    defineField({name: 'showMoreLabel', title: 'Home-page button label', type: 'string', initialValue: 'Show More Publications'}),
     defineField({
       name: 'items',
       title: 'Publications',
       type: 'array',
-      fieldset: 'publicationEntries',
       description: 'Add one entry for each publication. The first six appear on Home; all entries appear on the Publications page.',
       of: [
         defineArrayMember({
